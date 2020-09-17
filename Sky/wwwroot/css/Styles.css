@@ -1,0 +1,12 @@
+﻿.container {
+  /*width: 100%;*/
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0; }
+
+body {
+  overflow-x: hidden; }
+
+.header-video {
+  height: 800px; }
