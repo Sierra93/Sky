@@ -1,12 +1,31 @@
 ﻿.container {
-  /*width: 100%;*/
   padding-right: 0;
   padding-left: 0;
   margin-right: 0;
   margin-left: 0; }
 
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: Arial,Helvetica,sans-serif; }
 
 .header-video {
   height: 800px; }
+
+.person {
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  text-align: center;
+  font-size: 17px;
+  font-family: monospace; }
+  .person strong {
+    font-weight: 900;
+    text-transform: uppercase; }
+  .person button:hover {
+    color: #40E0D0;
+    transition: 0.5s;
+    text-decoration: none; }
+
+.btn-link {
+  font-weight: 400;
+  color: black;
+  text-decoration: none; }
