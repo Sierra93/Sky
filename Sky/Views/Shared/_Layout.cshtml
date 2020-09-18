@@ -11,81 +11,81 @@
 	<header>
 		@*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">*@
 		<!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
-	<div class="container">-->
+		<div class="container">-->
 		@*<a class="navbar-brand" asp-area="" asp-controller="Route" asp-action="Index">Sky</a>*@
 
 		<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-					aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="navbar-collapse collapse d-sm-inline-flex">
-				<div class="head-1">
-					<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Index">
-						<strong>Антон Тимошенко</strong><br />
-						Разработка сайтов
-					</a>
-				</div>
-
-				<ul class="navbar-nav flex-grow-1 head-2">
-					<li class="nav-item person">
+						aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="navbar-collapse collapse d-sm-inline-flex">
+					<div class="head-1">
 						<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Index">
-							Главная
+							<strong>Антон Тимошенко</strong><br />
+							Разработка сайтов
 						</a>
-					</li>
+					</div>
 
-					<li class="nav-item">
-						<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
-							Обо мне
-						</a>
-					</li>
+					<ul class="navbar-nav flex-grow-1 head-2">
+						<li class="nav-item person">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Index">
+								Главная
+							</a>
+						</li>
 
-					<li class="nav-item">
-						<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
-							Мои услуги
-						</a>
-					</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
+								Обо мне
+							</a>
+						</li>
 
-					<li class="nav-item">
-						<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
-							Портфолио
-						</a>
-					</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
+								Мои услуги
+							</a>
+						</li>
 
-					<li class="nav-item">
-						<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
-							Контакты
-						</a>
-					</li>
-				</ul>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
+								Портфолио
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
+								Контакты
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-	</nav>-->
+		</nav>-->
 		<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
 		@*<a class="navbar-brand" href="#">Navbar w/ text</a>*@
 
 		<!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarText">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Features</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Pricing</a>
-				</li>
-			</ul>
-			<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Index">
-				<strong>Антон Тимошенко</strong><br />
-				Разработка сайтов
-			</a>
-		</div>
-	</nav>-->
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Pricing</a>
+					</li>
+				</ul>
+				<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Index">
+					<strong>Антон Тимошенко</strong><br />
+					Разработка сайтов
+				</a>
+			</div>
+		</nav>-->
 
-		<nav class="navbar navbar-light bg-light justify-content-between">
+		<nav class="navbar navbar-light fixed-top bg-light justify-content-around">
 			<a class="nav-link text-dark person" asp-area="" asp-controller="Route" asp-action="Index">
 				<strong>Антон Тимошенко</strong><br />
 				Разработка сайтов
@@ -112,55 +112,59 @@
 				<button class="btn btn-link" type="button">
 					Контакты
 				</button>
-				
+
 				@*<ul class="navbar-nav flex-grow-1 head-2">
-			<li class="nav-item person">
-				<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Index">
-					Главная
-				</a>
-			</li>
+						<li class="nav-item person">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Index">
+								Главная
+							</a>
+						</li>
 
-			<li class="nav-item">
-				<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
-					Обо мне
-				</a>
-			</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
+								Обо мне
+							</a>
+						</li>
 
-			<li class="nav-item">
-				<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
-					Мои услуги
-				</a>
-			</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
+								Мои услуги
+							</a>
+						</li>
 
-			<li class="nav-item">
-				<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
-					Портфолио
-				</a>
-			</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
+								Портфолио
+							</a>
+						</li>
 
-			<li class="nav-item">
-				<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
-					Контакты
-				</a>
-			</li>
-		</ul>*@
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
+								Контакты
+							</a>
+						</li>
+					</ul>*@
 			</form>
 		</nav>
 	</header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - Sky - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+	@*<div class="container">
+			<main role="main" class="pb-3">
+
+			</main>
+		</div>*@
+
+	@RenderBody()
+
+	<footer class="border-top footer text-muted">
+		<div class="container">
+			&copy; 2020 - Sky - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+		</div>
+	</footer>
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@RenderSection("Scripts", required: false)
 </body>
 </html>
