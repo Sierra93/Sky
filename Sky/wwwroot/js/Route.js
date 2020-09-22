@@ -12,6 +12,10 @@ var header = new Vue({
 	methods: {
 		onMain() {
 			window.location.href = "https://localhost:44310/index";
-		}
+		},
+
+		onAboutMe() {
+			window.location.href = "https://localhost:44310/about-me";
+		}	
 	}
 });

@@ -100,7 +100,7 @@
 					Главная
 				</button>
 
-				<button class="btn btn-link" type="button">
+				<button class="btn btn-link" type="button" v-on:click="onAboutMe">
 					Обо мне
 				</button>
 
@@ -154,6 +154,7 @@
 	@RenderBody()
 
 	<!-- Секция футера. -->
+	<a id="send"></a>
 	<footer class="footer">
 		<div class="row">
 			<div class="col">
@@ -187,7 +188,7 @@
 
 					<div class="btn-form">
 						<button type="button" class="btn btn-dark form-control-lg btn-order text-my-info">
-							Подробнее
+							Заказать сайт
 						</button>
 					</div>
 
