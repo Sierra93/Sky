@@ -10,168 +10,169 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 </head>
 <body>
-	<section class="about">
-		<video class="video" loop="loop" autoplay="">
-			<source src="/video/file.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-		</video>
+	<div id="index">
+		<a id="arrow-up"></a>
 
-		<div class="about-title">
-			<p class="font_7 text-center">
-				<span class="do-span">УСПЕХ —&nbsp;ЭТО НАУКА, ЕСЛИ У ВАС ЕСТЬ УСЛОВИЯ, ВЫ ПОЛУЧИТЕ</span>
-			</p>
+		<section class="about">
+			<video class="video" loop="loop" autoplay="">
+				<source src="/video/file.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+			</video>
 
-			<h3 class="font_3 text-center">
-				<span>
-					<span>РЕЗУЛЬТАТ</span>
-				</span>
-			</h3>
-			<div class="text-center">
-				<button type="button" class="btn btn-dark form-control-lg btn-order">
-					Заказать сайт
-				</button>
-			</div>
-		</div>
-	</section>
-
-	<!-- Секция обо мне -->
-	<div class="me">
-		<div class="row">
-			<div class="col my-info-title">
-				<div class="block-name mt-5">
-					<h4 class="name">Антон<br /> Тимошенко</h4>
-				</div>
-
-				<p class="text-my-info">
-					Это текст. Нажмите один раз и выберите «Редактировать текст» или просто кликните дважды, чтобы добавить свой текст и настроить шрифт. Вы можете переместить его в любое место на странице. Расскажите посетителям сайта о себе.
+			<div class="about-title">
+				<p class="font_7 text-center">
+					<span class="do-span">УСПЕХ —&nbsp;ЭТО НАУКА, ЕСЛИ У ВАС ЕСТЬ УСЛОВИЯ, ВЫ ПОЛУЧИТЕ</span>
 				</p>
 
-				<p class="text-my-info">
-					Здесь будет удачно смотреться текст о вашей компании и услугах. Используйте эту возможность, чтобы выгодно представить себя и свою компанию клиентам.
-				</p>
-
-				<button type="button" class="btn btn-dark form-control-lg btn-order text-my-info">
-					Подробнее
-				</button>
+				<h3 class="font_3 text-center">
+					<span>
+						<span>РЕЗУЛЬТАТ</span>
+					</span>
+				</h3>
+				<div class="text-center">
+					<button type="button" class="btn btn-dark form-control-lg btn-order">
+						Заказать сайт
+					</button>
+				</div>
 			</div>
+		</section>
 
-			<div class="col">
-				<img class="my-foto" src="~/images/ya.gQuVX.jpg" />
-			</div>
-		</div>
-	</div>
-
-	<!-- Вторая секция. -->
-	<div class="about about-two">
-		<img class="video img-fon-two" src="~/images/84770f_0cf5b6c1550a4b8c92f92f1064cc68de_mv2.webp" />
-
-		<div class="about-title nop">
-			<div class="me">
-				<div class="row">
-					<div class="col">
-						<h4 class="my-services mt-5">Мои услуги</h4>
+		<!-- Секция обо мне -->
+		<div class="me">
+			<div class="row">
+				<div class="col my-info-title">
+					<div class="block-name mt-5">
+						<h4 class="name">Антон<br /> Тимошенко</h4>
 					</div>
 
-					<div class="col">
+					<p class="text-my-info">
+						Меня зовут Антон. Я живу в Москве, и являюсь частным Full-stack разработчиком. Опыт в разработке 5 лет, поэтому мне есть, что вам предложить. Могу заключить договор оказания услуг.
+						Создаю проекты любой сложности, начиная от сайта-визитки заканчивая индивидуальным проектом!
+					</p>
 
-					</div>
+					<button type="button" class="btn btn-dark form-control-lg btn-order text-my-info" v-on:click="onAboutMe">
+						Подробнее
+					</button>
 				</div>
 
-				<div class="row services">
-					<nav class="nav nav-pills flex-column flex-sm-row text-center">
-						<!-- Секция табов.-->
-						<div class="nav-services">
-							<ul class="nav nav-tabs mb-3">
-								<li class="nav-item">
-									<a class="nav-link active" data-toggle="tab" href="#develop">Разработка сайтов</a>
-								</li>
+				<div class="col">
+					<img class="my-foto" src="~/images/ya.gQuVX.jpg" />
+				</div>
+			</div>
+		</div>
 
-								<li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#dop">Продвижение и редизайн</a>
-								</li>
+		<!-- Вторая секция. -->
+		<div class="about about-two">
+			<img class="video img-fon-two" src="~/images/84770f_0cf5b6c1550a4b8c92f92f1064cc68de_mv2.webp" />
 
-								<li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#indi-develop">Индивидуальная разработка</a>
-								</li>
-							</ul>
+			<div class="about-title nop">
+				<div class="me">
+					<div class="row">
+						<div class="col">
+							<h4 class="my-services mt-5">Мои услуги</h4>
+						</div>
 
-							<!-- Тело табов. -->
-							<div class="tab-content">
-								<div class="tab-pane fade active show" id="develop">
-									<div class="row">
-										<div class="block-services">
-											<div class="service-1">
-												<h3 class="service-item">Landing Page</h3>
+						<div class="col">
 
-												<p>Срок: от 3-х дней</p>
+						</div>
+					</div>
 
-												<p>Стоимость: от 5 000 руб.</p>
+					<div class="row services">
+						<nav class="nav nav-pills flex-column flex-sm-row text-center">
+							<!-- Секция табов.-->
+							<div class="nav-services">
+								<ul class="nav nav-tabs mb-3">
+									<li class="nav-item">
+										<a class="nav-link active" data-toggle="tab" href="#develop">Разработка сайтов</a>
+									</li>
 
-												<button type="button" class="btn btn-dark form-control-lg btn-order not-margin text-my-info">
-													Заказать
-												</button>
-											</div>
+									<li class="nav-item">
+										<a class="nav-link" data-toggle="tab" href="#dop">Продвижение и редизайн</a>
+									</li>
 
-											<div class="service-1">
-												<h3 class="service-item">Сайт-визитка</h3>
+									<li class="nav-item">
+										<a class="nav-link" data-toggle="tab" href="#indi-develop">Индивидуальная разработка</a>
+									</li>
+								</ul>
 
-												<p>Срок: от 2-х дней</p>
+								<!-- Тело табов. -->
+								<div class="tab-content">
+									<div class="tab-pane fade active show" id="develop">
+										<div class="row">
+											<div class="block-services">
+												<div class="service-1">
+													<h3 class="service-item">Landing Page</h3>
 
-												<p>Стоимость: от 7 000 руб.</p>
+													<p>Срок: от 3-х дней</p>
 
-												<button type="button" class="btn btn-dark form-control-lg btn-order not-margin text-my-info">
-													Заказать
-												</button>
-											</div>
+													<p>Стоимость: от 5 000 руб.</p>
 
-											<div class="service-1">
-												<h3 class="service-item">Персональный сайт</h3>
+													<button type="button" class="btn btn-dark form-control-lg btn-order not-margin text-my-info">
+														Заказать
+													</button>
+												</div>
 
-												<p>Срок: от 3-х дней</p>
+												<div class="service-1">
+													<h3 class="service-item">Сайт-визитка</h3>
 
-												<p>Стоимость: от 10 000 руб.</p>
+													<p>Срок: от 2-х дней</p>
 
-												<button type="button" class="btn btn-dark form-control-lg btn-order not-margin text-my-info">
-													Заказать
-												</button>
-											</div>
+													<p>Стоимость: от 7 000 руб.</p>
 
-											<div class="service-1">
-												<h3 class="service-item">Корпоративный сайт</h3>
+													<button type="button" class="btn btn-dark form-control-lg btn-order not-margin text-my-info">
+														Заказать
+													</button>
+												</div>
 
-												<p>Срок: от 1 недели</p>
+												<div class="service-1">
+													<h3 class="service-item">Персональный сайт</h3>
 
-												<p>Стоимость: от 15 000 руб.</p>
+													<p>Срок: от 3-х дней</p>
 
-												<button type="button" class="btn btn-dark form-control-lg btn-order not-margin text-my-info">
-													Заказать
-												</button>
-											</div>
+													<p>Стоимость: от 10 000 руб.</p>
 
-											<div class="service-1">
-												<h3 class="service-item">Интернет-магазин</h3>
+													<button type="button" class="btn btn-dark form-control-lg btn-order not-margin text-my-info">
+														Заказать
+													</button>
+												</div>
 
-												<p>Срок: от 3 недель</p>
+												<div class="service-1">
+													<h3 class="service-item">Корпоративный сайт</h3>
 
-												<p>Стоимость: от 20 000 руб.</p>
+													<p>Срок: от 1 недели</p>
 
-												<button type="button" class="btn btn-dark form-control-lg btn-order not-margin text-my-info">
-													Заказать
-												</button>
+													<p>Стоимость: от 15 000 руб.</p>
+
+													<button type="button" class="btn btn-dark form-control-lg btn-order not-margin text-my-info">
+														Заказать
+													</button>
+												</div>
+
+												<div class="service-1">
+													<h3 class="service-item">Интернет-магазин</h3>
+
+													<p>Срок: от 3 недель</p>
+
+													<p>Стоимость: от 20 000 руб.</p>
+
+													<button type="button" class="btn btn-dark form-control-lg btn-order not-margin text-my-info">
+														Заказать
+													</button>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
 
-								<div class="tab-pane fade" id="dop">
-									Продвижение и редизайн
-								</div>
+									<div class="tab-pane fade" id="dop">
+										Продвижение и редизайн
+									</div>
 
-								<div class="tab-pane fade" id="indi-develop">
-									Индивидуальная разработка
+									<div class="tab-pane fade" id="indi-develop">
+										Индивидуальная разработка
+									</div>
 								</div>
 							</div>
-						</div>
-					</nav>
+						</nav>
+					</div>
 				</div>
 			</div>
 		</div>

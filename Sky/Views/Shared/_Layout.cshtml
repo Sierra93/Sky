@@ -9,7 +9,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 </head>
 <body>
-	<header>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<header id="header">
 		@*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">*@
 		<!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
 		<div class="container">-->
@@ -87,14 +89,14 @@
 		</nav>-->
 
 		<nav class="navbar navbar-light fixed-top bg-light justify-content-around">
-			<a class="nav-link text-dark person" asp-area="" asp-controller="Route" asp-action="Index">
+			<a class="nav-link text-dark person" asp-controller="Route" asp-action="Index">
 				<strong>Антон Тимошенко</strong><br />
 				Разработка сайтов
 			</a>
 
 			<form class="form-inline person">
 				@*<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">*@
-				<button class="btn btn-link" type="button">
+				<button class="btn btn-link" type="button" v-on:click="onMain">
 					Главная
 				</button>
 
@@ -163,8 +165,8 @@
 
 						E-mail: <a class="brief" href="mailto:#"> skyhorizen@skyhorizen.ru </a><br />
 
-						Социальные сети: <a class="brief" href="https://vk.com/skyhorizen"> ВКонтакте </a><br> 
-						
+						Социальные сети: <a class="brief" href="https://vk.com/skyhorizen"> ВКонтакте </a><br>
+
 						Пн. – Вс. С 10:00 до 23:00 <br>
 
 						&copy; 2019-2020 Антон Тимошенко - Разработка сайтов. <br>
@@ -203,6 +205,8 @@
 		</div>
 	</footer>
 
+	<script src="~/js/Route.js"></script>
+	<script src="~/js/SlowScroll.js"></script>
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/site.js" asp-append-version="true"></script>

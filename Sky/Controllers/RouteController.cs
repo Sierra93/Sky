@@ -12,5 +12,15 @@ namespace Sky.Controllers {
         public IActionResult Index() { 
             return View();
         }
+
+        [Route("index")]
+        public IActionResult OnRouteMain() {
+            return View("Index");
+        }
+
+        [Route("about-me")]
+        public IActionResult AboutMe() {
+            return View();
+        }
     }
 }
