@@ -9,23 +9,18 @@ using Sky.Models;
 
 namespace Sky.Controllers {
     public class RouteController : Controller {
-        private readonly ILogger<RouteController> _logger;
-
-        public RouteController(ILogger<RouteController> logger) {
-            _logger = logger;
-        }
-
-        public IActionResult Index() {
+        public IActionResult Index() { 
             return View();
         }
 
-        public IActionResult Privacy() {
-            return View();
+        [Route("index")]
+        public IActionResult OnRouteMain() {
+            return View("Index");
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error() {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        [Route("about-me")]
+        public IActionResult AboutMe() {
+            return View();
         }
     }
 }
