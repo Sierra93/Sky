@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 </head>
 <body>
-	<div id="index">
+	@*<div id="index">*@
 		<a id="arrow-up"></a>
 
 		<section class="about">
@@ -35,7 +35,7 @@
 		</section>
 
 		<!-- Секция обо мне -->
-		<div class="me">
+		<div id="index" class="me">
 			<div class="row">
 				<div class="col my-info-title">
 					<div class="block-name mt-5">
@@ -97,9 +97,9 @@
 								<div class="tab-content">
 									<div class="tab-pane fade active show" id="develop">
 										<div class="row">
-											<div class="block-services">
+											<div id="order" class="block-services">
 												<div class="service-1">
-													<h3 class="service-item">Landing Page</h3>
+													<h3 class="service-item" v-on:click="GetOrder('lp')">Landing Page</h3>
 
 													<p>Срок: от 3-х дней</p>
 
@@ -265,8 +265,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	@*</div>*@
 
+	<script src="~/js/Order.js"></script>
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
