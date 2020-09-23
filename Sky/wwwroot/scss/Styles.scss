@@ -56,6 +56,10 @@ body {
     text-decoration: none;
     font-size: 17px;
     transition: 0.5s;
+
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 .font_7 {
@@ -82,13 +86,9 @@ body {
 
 // Для текста на фоне видео.
 .about {
-    //padding: 300px 0;
     padding: 200px 0;
-    //background-color: #0d2562;
-    //color: #fff;
     overflow: hidden;
     position: relative;
-    //height: 100vh;
 }
 
 .about-title {
@@ -114,9 +114,6 @@ body {
     top: 0;
     width: 100%;
     height: 110px;
-    /*-webkit-background-size: cover;
-    background-size: cover;*/
-    /*background: url(https://denis-creative.com/wp-content/uploads/2018/01/about-header-bg.png) 0 top no-repeat;*/
 }
 
 .about-footer {
@@ -124,9 +121,6 @@ body {
     bottom: 0;
     width: 100%;
     height: 126px;
-    /*-webkit-background-size: cover;
-    background-size: cover;*/
-    /*background: url(https://denis-creative.com/wp-content/uploads/2018/01/about-footer-bg.png) 0 top no-repeat;*/
 }
 
 .about-header-bg-2 {
@@ -141,12 +135,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    /*.about {*/
-        /*background: url(https://denis-creative.com/wp-content/uploads/2018/01/about-bg.jpg) 0 top no-repeat #0e438b;*/
-        /*-webkit-background-size: cover;
-        background-size: cover;
-    }*/
-
     .video,
     .about-header,
     .about-footer,
@@ -199,20 +187,8 @@ body {
 .border {
     background: none repeat scroll 0 0 black;
     display: block;
-    //height: 10px;
-    //margin-bottom: 30px;
-    //width: 100px;
     width: 40px;
     height: 5px;
-}
-
-.my-foto {
-    /*width: 712px;
-    height: 725px;*/
-}
-
-.my-info-title {
-
 }
 
 .text-my-info {
@@ -366,7 +342,3 @@ footer {
     border-bottom: 2px solid #3A7C80;
     border-width: initial;
 }
-
-/*.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-    text-decoration: initial;
-}*/
