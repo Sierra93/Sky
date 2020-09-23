@@ -1,0 +1,41 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> Подробнее об услуге </title>
+	<link href="~/css/Styles.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+<body>
+	<section class="mb-5">
+	</section>
+	<!-- Секция описания услуги. -->
+	<div class="me">
+		<div class="row">
+			<div id="order" class="col my-info-title">
+				<div class="block-name mt-5">
+					<h4 class="name">{{orderName}}</h4>
+				</div>
+
+				<p class="text-my-info">{{orderDetails}}</p>
+			</div>
+
+			<div class="col">
+				@*<img class="my-foto" src="~/images/ya.gQuVX.jpg" />*@
+			</div>
+		</div>
+	</div>
+
+	<!-- Вторая секция. -->
+	<div class="about about-two">
+
+	</div>
+
+	<script src="~/js/Order.js"></script>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

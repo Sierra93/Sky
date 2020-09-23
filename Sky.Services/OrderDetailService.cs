@@ -72,8 +72,7 @@ namespace Sky.Services {
                         break;
                 }
 
-                var oOrder = await _db.OrdersDetails.Where(o => o.OrderName.Equals(param)).FirstOrDefaultAsync();
-                return oOrder;
+                return await _db.OrdersDetails.Where(o => o.OrderName.Equals(param)).FirstOrDefaultAsync(); ;
             }
             catch (ArgumentNullException ex) {
                 throw new ArgumentNullException("Не передано название услуги", ex.Message.ToString());

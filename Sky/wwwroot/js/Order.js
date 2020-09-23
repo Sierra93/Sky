@@ -3,7 +3,9 @@
 var order = new Vue({
 	el: "#order",
 	data: {
-		aConcreteOrder: []
+		aConcreteOrder: [],
+		orderName: localStorage["orderName"],
+		orderDetails: localStorage["orderDetails"]
 	},
 	methods: {
 		// Функция получает данные услуги.
@@ -15,6 +17,9 @@ var order = new Vue({
 					.then((response) => {
 						this.aConcreteOrder = response.data;
 						console.log("Данные услуги", this.aConcreteOrder);
+						localStorage["orderName"] = this.aConcreteOrder.orderName;
+						localStorage["orderDetails"] = this.aConcreteOrder.orderDetails;
+						window.location.href = "https://localhost:44310/order-details";
 					})
 					.catch((XMLHttpRequest) => {
 						throw new Error("Ошибка получения данных услуги", XMLHttpRequest.response.data);
