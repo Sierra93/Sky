@@ -30,5 +30,11 @@ namespace Sky.Controllers {
         public IActionResult GetOrderDetails() {
             return View();
         }
+
+        // Метод переходит на страницу портфолио.
+        [Route("portfolio")]
+        public IActionResult Portfolio() {
+            return View();
+        }
     }
 }

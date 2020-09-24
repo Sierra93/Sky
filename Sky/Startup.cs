@@ -25,7 +25,7 @@ namespace Sky {
             services.AddControllersWithViews();
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(
-                   Configuration.GetConnectionString("DefaultConnection")));
+                   Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("Sky")));
 
             services.AddCors(options => options.AddPolicy("ApiCorsPolicy", builder => {
                 builder.WithOrigins("https://apihosting.ru/", "https://apihosting.ru").AllowAnyMethod().AllowAnyHeader();

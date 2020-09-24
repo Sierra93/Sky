@@ -16,6 +16,10 @@ var header = new Vue({
 
 		onAboutMe() {
 			window.location.href = "https://localhost:44310/about-me";
-		}	
+		},
+
+		onPortfolio() {
+			window.location.href = "https://localhost:44310/portfolio";
+		}
 	}
 });
