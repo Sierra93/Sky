@@ -17,7 +17,7 @@ namespace Sky.Models {
         public string Title { get; set; }   // Наименование работы.
 
         [Column("IMAGE_PATH", TypeName = "nvarchar(500)")]
-        public string ImagePath { get; set; }   // Путь к изображению в папке.
+        public string Url { get; set; }   // Путь к изображению в папке. 
 
         [Column("COMMENT_TASK", TypeName = "nvarchar(500)")]
         public string CommentTask { get; set; } // Краткое описание работы.

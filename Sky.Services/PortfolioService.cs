@@ -27,8 +27,10 @@ namespace Sky.Services {
         public async override Task<IEnumerable<PortfolioDto>> GetAllWorks() {
             try {
                 var oWorks = await _db.Portfolio.ToListAsync();
+
+                // Приводит путь изображений к нужному виду для фронта.
                 foreach (var el in oWorks) {
-                    el.ImagePath = el.ImagePath.Insert(0, "~/").Replace("wwwroot/", "");
+                    el.Url = el.Url.Insert(0, "/").Replace("wwwroot/", "");
                 }
 
                 return oWorks;

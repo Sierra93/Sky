@@ -203,7 +203,7 @@ body {
     margin: 0px 0px 64px calc((100% - 490px) * 1);
     border-top: 2px solid black;
     width: 40px;
-    margin-bottom: 1%;
+    margin-bottom: 5%;
 }
 
 .nop {
@@ -342,4 +342,22 @@ footer {
     border-color: transparent;
     border-bottom: 2px solid #3A7C80;
     border-width: initial;
+}
+
+// Блок с работами.
+.list-works {
+    display: flex;
+    margin-bottom: 5%;
+
+    .my-foto {
+        width: 600px;
+
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+.portfolio-title {
+    margin: 0px 0px 64px calc((48% - 490px) * 1);
 }

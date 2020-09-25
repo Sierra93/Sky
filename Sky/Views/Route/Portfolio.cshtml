@@ -16,24 +16,30 @@
 		<!-- Секция со списком работ. -->
 		<div class="me">
 			<div class="row">
-				<div class="col my-info-title">
-					<div class="block-name mt-5">
-						<h4 class="name">Портфолио</h4>
+				<div class="my-info-title">
+					<div class="block-name portfolio-title mt-5">
+						<h4 class="name text-center">Портфолио</h4>
 					</div>
 
 					<div class="list-works" v-for="el in aWorks">
-						<p class="text-my-info">{{el.title}}</p>
+						<div class="col">
+							<p class="text-my-info"><strong>{{el.title}}</strong></p>
 
-						<p class="text-my-info">{{el.commentTask}}</p>
+							<p class="text-my-info"><strong>Задача:</strong> {{el.commentTask}}</p>
 
-						<p class="text-my-info">{{el.commentDetails}}</p>
+							<p class="text-my-info"><strong>Описание:</strong> {{el.commentDetails}}</p>
 
-						<img class="my-foto" src="{{el.imagePath}}" />
-					</div>					
-				</div>
+							<div class="btn-form">
+								<button type="button" class="btn btn-dark form-control-lg btn-order text-my-info">
+									Подробнее
+								</button>
+							</div>
+						</div>
 
-				<div class="col">
-					@*<img class="my-foto" src="{{el.imagePath}}" />*@
+						<div class="col">
+							<img class="my-foto" :src="el.url" />
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -43,7 +49,7 @@
 
 		</div>
 	</div>
-	
+
 	<script src="~/js/Portfolio.js"></script>
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
