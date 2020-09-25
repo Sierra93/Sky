@@ -19,17 +19,9 @@
 
 					<div class="list-works" v-for="el in aWorks">
 						<div class="col">
-							<p class="text-my-info"><strong>{{el.title}}</strong></p>
+							<p class="text-my-info"><strong>Заголовок: </strong>{{el.title == '' ? 'нет' : el.title}}</p>
 
-							<p class="text-my-info"><strong>Задача:</strong> {{el.commentTask}}</p>
-
-							<p class="text-my-info"><strong>Описание:</strong> {{el.commentDetails}}</p>
-
-							<div class="btn-form">
-								<button type="button" class="btn btn-dark form-control-lg btn-order text-my-info" v-bind:value="el.groupId" v-on:click="setGroupId">
-									Подробнее
-								</button>
-							</div>
+							<p class="text-my-info"><strong>Описание:</strong> {{el.detailsTask == '' ? 'нет': el.detailsTask}}</p>
 						</div>
 
 						<div class="col">

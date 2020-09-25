@@ -36,5 +36,11 @@ namespace Sky.Controllers {
         public IActionResult Portfolio() {
             return View();
         }
+
+        // Метод переходит на страницу получения данных определенной работы.
+        [Route("get-work")]
+        public IActionResult GetWork() {
+            return View();
+        }
     }
 }

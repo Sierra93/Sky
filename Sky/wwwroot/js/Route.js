@@ -1,5 +1,8 @@
 ﻿var index = new Vue({
 	el: "#index",
+	created() {
+		localStorage.removeItem("bDetail");
+	},
 	methods: {
 		onAboutMe() {
 			window.location.href = "https://localhost:44310/about-me";
@@ -11,6 +14,7 @@ var header = new Vue({
 	el: "#header",
 	methods: {
 		onMain() {
+			localStorage.removeItem("bDetail");
 			window.location.href = "https://localhost:44310/index";
 		},
 

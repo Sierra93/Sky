@@ -26,7 +26,7 @@ namespace Sky.Models {
         public string CommentDetails { get; set; }  // Подробное описание работы.
 
         [Column("ID_GROUP", TypeName = "int")]
-        public int GroupId { get; set; }    // Номер категории.
+        public int? GroupId { get; set; }    // Номер категории.
 
         [Column("CATEGORY_PROJECT", TypeName = "nvarchar(500)")]
         public string Category { get; set; }    // Категория работы.

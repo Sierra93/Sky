@@ -15,5 +15,10 @@ namespace Sky.Core {
         /// </summary>
         /// <returns></returns>
         public abstract Task<IEnumerable<PortfolioDto>> GetAllWorks();
+
+        /// <summary>
+        /// Метод получает данные определенной работы.
+        /// </summary>
+        public abstract Task<IEnumerable<PortfolioDetailsDto>> GetConcreteWork(int? groupId);
     }
 }

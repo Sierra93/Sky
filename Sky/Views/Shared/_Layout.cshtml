@@ -11,6 +11,13 @@
 <body>
 	<script src="https://unpkg.com/vue"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+	<div class="mask">
+		<div class="loader">
+
+		</div>
+	</div>
+
 	<header id="header">
 		@*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">*@
 		<!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
@@ -89,7 +96,7 @@
 		</nav>-->
 
 		<nav class="navbar navbar-light fixed-top bg-light justify-content-around">
-			<a class="nav-link text-dark person" asp-controller="Route" asp-action="Index">
+			<a class="nav-link text-dark person" v-on:click="onMain">
 				<strong>Антон Тимошенко</strong><br />
 				Разработка сайтов
 			</a>
@@ -117,36 +124,36 @@
 				</a>
 
 				@*<ul class="navbar-nav flex-grow-1 head-2">
-			<li class="nav-item person">
-				<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Index">
-					Главная
-				</a>
-			</li>
+						<li class="nav-item person">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Index">
+								Главная
+							</a>
+						</li>
 
-			<li class="nav-item">
-				<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
-					Обо мне
-				</a>
-			</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
+								Обо мне
+							</a>
+						</li>
 
-			<li class="nav-item">
-				<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
-					Мои услуги
-				</a>
-			</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
+								Мои услуги
+							</a>
+						</li>
 
-			<li class="nav-item">
-				<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
-					Портфолио
-				</a>
-			</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
+								Портфолио
+							</a>
+						</li>
 
-			<li class="nav-item">
-				<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
-					Контакты
-				</a>
-			</li>
-		</ul>*@
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-controller="Route" asp-action="Privacy">
+								Контакты
+							</a>
+						</li>
+					</ul>*@
 			</form>
 		</nav>
 	</header>
@@ -209,6 +216,7 @@
 
 	<script src="~/js/Route.js"></script>
 	<script src="~/js/SlowScroll.js"></script>
+	<script src="~/js/Loader.js"></script>
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/site.js" asp-append-version="true"></script>

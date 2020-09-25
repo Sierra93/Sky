@@ -26,5 +26,15 @@ namespace Sky.Controllers {
 
             return Ok(await basePortfolio.GetAllWorks());
         }
+
+        /// <summary>
+        /// Метод получает данные определенной работы.
+        /// </summary>
+        [HttpGet, Route("get-work")]
+        public async Task<IActionResult> GetConcreteWork([FromQuery] int? groupId) {
+            BasePortfolio basePortfolio = new PortfolioService(_db);
+
+            return Ok(await basePortfolio.GetConcreteWork(groupId));
+        }
     }
 }

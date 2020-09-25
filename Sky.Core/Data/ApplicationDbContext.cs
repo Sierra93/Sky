@@ -10,6 +10,8 @@ namespace Sky.Core.Data {
 
         public DbSet<PortfolioDto> Portfolio { get; set; }  // Таблица с работами в портфолио.
 
+        public DbSet<PortfolioDetailsDto> DetailsWorks { get; set; }    // Таблица с деталями работ.
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
@@ -22,6 +24,10 @@ namespace Sky.Core.Data {
 
             modelBuilder.Entity<MultepleContextTable>()
                 .HasOne(sc => sc.PortfolioDto)
+                .WithMany(s => s.MultepleContextTables);
+
+            modelBuilder.Entity<MultepleContextTable>()
+                .HasOne(sc => sc.PortfolioDetailsDto)
                 .WithMany(s => s.MultepleContextTables);
         }
     }
