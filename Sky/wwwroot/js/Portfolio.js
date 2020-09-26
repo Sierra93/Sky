@@ -1,7 +1,6 @@
 ﻿"use strict";
 
 const START = "Портфолио";
-const LANDING = "Landing Page";
 
 var portfolio = new Vue({
 	el: "#portfolio",
@@ -11,6 +10,7 @@ var portfolio = new Vue({
 			this._loadAllWorks();
 			return;
 		}			
+
 		this.onGetConcreteWork();
 	},
 	data: {
@@ -37,11 +37,6 @@ var portfolio = new Vue({
 			catch (ex) {
 				throw new Error(ex);
 			}
-		},
-
-		// Функция получает работы выбранной категории.
-		onGetWorkCategory(groupId) {
-			console.log("onGetWorkCategory");
 		},
 
 		// Функция получает все данные конкретной работы.
@@ -71,6 +66,31 @@ var portfolio = new Vue({
 			localStorage["bDetail"] = true;
 			localStorage["groupId"] = groupId;
 			window.location.href = "https://localhost:44310/get-work";
+		},
+
+		// Функция получает все работы типа.
+		onFilter(type, name) {
+			this.title = name;
+			let sUrl = "https://localhost:44310/api/portfolio/type-work?type=".concat(type);
+
+			try {
+				axios.get(sUrl)
+					.then((response) => {
+						this.aWorks = response.data;
+						console.log("Работа типа", this.aWorks);
+					})
+					.catch((XMLHttpRequest) => {
+						throw new Error("Ошибка получения работы", XMLHttpRequest.response.data);
+					});
+			}
+			catch (ex) {
+				throw new Error(ex);
+			}
+		},
+
+		// Функция загружает все работы.
+		onLoadAllWorks() {
+			this._loadAllWorks();
 		}
 	}
 });

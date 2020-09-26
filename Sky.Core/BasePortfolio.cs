@@ -20,5 +20,10 @@ namespace Sky.Core {
         /// Метод получает данные определенной работы.
         /// </summary>
         public abstract Task<IEnumerable<PortfolioDetailsDto>> GetConcreteWork(int? groupId);
+
+        /// <summary>
+        /// Метод получает работы типа.
+        /// </summary>
+        public abstract Task<IEnumerable<PortfolioDto>> GetTypeWork(string type);
     }
 }

@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 </head>
 <body>
+	<a id="arrow-up"></a>
 	<div id="portfolio">
 		<section class="mb-5">
 		</section>
@@ -17,8 +18,32 @@
 						<h4 class="name text-center">{{title}}</h4>
 					</div>
 
+					<div class="col-lg-12 filter">
+						<span class="filter-item" v-on:click="onLoadAllWorks">
+							Все
+						</span>
+
+						<span class="filter-item" v-on:click="onFilter('lp', 'Landing Page')">
+							Landing Page
+						</span>
+
+						<span class="filter-item" v-on:click="onFilter('site-viz', 'Сайт-визитка')">
+							Сайт-визитка
+						</span>
+
+						<span class="filter-item" v-on:click="onFilter('corporate', 'Корпоративный сайт')">
+							Корпоративный сайт
+						</span>
+
+						<span class="filter-item" v-on:click="onFilter('shop', 'Интернет-магазин')">
+							Интернет-магазин
+						</span>
+					</div>
+
 					<div class="list-works" v-for="el in aWorks">
 						<div class="col">
+							<p class="text-my-info hide"><strong>{{el.id}}</strong></p>
+
 							<p class="text-my-info"><strong>{{el.title}}</strong></p>
 
 							<p class="text-my-info"><strong>Задача:</strong> {{el.commentTask}}</p>

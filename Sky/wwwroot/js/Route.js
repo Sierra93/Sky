@@ -14,7 +14,7 @@ var header = new Vue({
 	el: "#header",
 	methods: {
 		onMain() {
-			localStorage.removeItem("bDetail");
+			localStorage.removeItem("bDetail"); 
 			window.location.href = "https://localhost:44310/index";
 		},
 

@@ -203,6 +203,23 @@ body {
     margin: 0px 64px 20px calc((100% - 490px) * 1);
 }
 
+// Фил  ьтры категорий работ.
+.filter {
+    margin: 0px 0px 64px calc((46% - 490px) * 1);
+
+    .filter-item {
+        font-size: 15px;
+        letter-spacing: normal;
+        font-family: monospace;
+        margin: 0 10px;
+        text-decoration: underline;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
 .block-name {
     margin: 0px 0px 64px calc((100% - 490px) * 1);
     border-top: 2px solid black;
@@ -406,3 +423,7 @@ footer {
     opacity: 0;
 }
 ////////////////////////////
+
+.hide {
+    display: none;
+}

@@ -36,5 +36,15 @@ namespace Sky.Controllers {
 
             return Ok(await basePortfolio.GetConcreteWork(groupId));
         }
+
+        /// <summary>
+        /// Метод получает работы типа.
+        /// </summary>
+        [HttpGet, Route("type-work")]
+        public async Task<IActionResult> GetTypeWork([FromQuery] string type) {
+            BasePortfolio basePortfolio = new PortfolioService(_db);
+
+            return Ok(await basePortfolio.GetTypeWork(type));
+        }
     }
 }
