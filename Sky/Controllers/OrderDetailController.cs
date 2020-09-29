@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Sky.Core;
 using Sky.Core.Data;
+using Sky.Models;
 using Sky.Services;
 
 namespace Sky.Controllers {
@@ -28,6 +29,17 @@ namespace Sky.Controllers {
             BaseOrder baseOrder = new OrderDetailService(_db);
 
             return Ok(await baseOrder.GetOrderDetail(order));
+        }
+
+        /// <summary>
+        /// Метод создает новую заявку.
+        /// </summary>
+        [HttpPost, Route("create-request")]
+        public async Task<IActionResult> CreateRequest([FromBody] RequestDto requestDto) {
+            BaseOrder baseOrder = new OrderDetailService(_db);
+            await baseOrder.CreateRequest(requestDto);
+
+            return Ok("Заявка успешно создана");
         }
     }
 }

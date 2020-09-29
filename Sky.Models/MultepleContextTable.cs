@@ -12,5 +12,8 @@ namespace Sky.Models {
 
         public int DetailsId { get; set; }
         public PortfolioDetailsDto PortfolioDetailsDto { get; set; }
+
+        public int RequestId { get; set; }
+        public RequestDto RequestDto { get; set; }
     }
 }

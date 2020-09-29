@@ -15,5 +15,10 @@ namespace Sky.Core {
         /// </summary>
         /// <returns></returns>
         public abstract Task<OrderDetailDto> GetOrderDetail(string order);
+
+        /// <summary>
+        /// Метод создает новую заявку.
+        /// </summary>
+        public abstract Task CreateRequest(RequestDto requestDto);
     }
 }

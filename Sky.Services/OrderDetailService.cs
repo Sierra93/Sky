@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Sky.Core;
 using Sky.Core.Constants;
 using Sky.Core.Data;
@@ -19,7 +20,7 @@ namespace Sky.Services {
         public OrderDetailService(ApplicationDbContext db) {
             _db = db;
         }
-
+        
         /// <summary>
         /// Метод получает данные услуги.
         /// </summary>
@@ -41,6 +42,27 @@ namespace Sky.Services {
             }
             catch (ArgumentNullException ex) {
                 throw new ArgumentNullException("Не передано название услуги", ex.Message.ToString());
+            }
+            catch (Exception ex) {
+                throw new Exception(ex.Message.ToString());
+            }
+        }
+
+        /// <summary>
+        /// Метод создает новую заявку.
+        /// </summary>
+        public async override Task CreateRequest(RequestDto requestDto) {
+            try {
+                if (string.IsNullOrEmpty(requestDto.Name) || string.IsNullOrEmpty(requestDto.EmailOrNumber) || string.IsNullOrEmpty(requestDto.Comment)) {
+                    throw new ArgumentNullException();
+                }
+
+                // Сохраняет заявку.
+                await _db.Requests.AddRangeAsync(requestDto);
+                await _db.SaveChangesAsync();
+            }
+            catch (ArgumentNullException ex) {
+                throw new ArgumentNullException("Обязательные поля не заполнены", ex.Message.ToString());
             }
             catch (Exception ex) {
                 throw new Exception(ex.Message.ToString());
