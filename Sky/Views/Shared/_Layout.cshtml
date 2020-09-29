@@ -163,59 +163,66 @@
 	<!-- Секция футера. -->
 	<a id="send"></a>
 	<a id="contacts"></a>
-	<footer class="footer">
-		<div class="row">
-			<div class="col">
-				<h6 class="my-services mt-5 contact-me">Свяжитесь <br />со мной</h6>
+	<div id="footer">
+		<footer class="footer">
+			<div class="row">
+				<div class="col">
+					<h6 class="my-services mt-5 contact-me">Свяжитесь <br />со мной</h6>
 
-				<div class="contact-me-details">
-					<label class="form-control-sm">
-						Тел. и WhatsApp: +7 (985) 683 80 46 <br>
+					<div class="contact-me-details">
+						<label class="form-control-sm">
+							Тел. и WhatsApp: +7 (985) 683 80 46 <br>
 
-						E-mail: <a class="brief" href="mailto:#"> skyhorizen@skyhorizen.ru </a><br />
+							E-mail: <a class="brief" href="mailto:#"> skyhorizen@skyhorizen.ru </a><br />
 
-						Социальные сети: <a class="brief" href="https://vk.com/skyhorizen"> ВКонтакте </a><br>
+							Социальные сети: <a class="brief" href="https://vk.com/skyhorizen"> ВКонтакте </a><br>
 
-						Пн. – Вс. С 10:00 до 23:00 <br>
+							Пн. – Вс. С 10:00 до 23:00 <br>
 
-						&copy; 2019-2020 Антон Тимошенко - Разработка сайтов. <br>
-					</label>
-				</div>
-			</div>
-
-			<!-- Форма обратной связи. -->
-			<div class="col">
-				<h6 class="mb-5">&nbsp;</h6>
-
-				<div class="form-group">
-					<div class="block-btn-send">
-						<input type="text" class="form-control mb-1 form-item" placeholder="*Ваше имя" />
-
-						<input type="text" class="form-control mb-1 form-item" placeholder="*Эл. почта или телефон" />
-
-						<textarea class="form-control form-item mb-1" cols="2" rows="5" placeholder="*Краткое описание проекта..."></textarea>
-
-						<div class="btn-form">
-							<button type="button" class="btn btn-dark form-control-lg btn-order text-my-info">
-								Заказать сайт
-							</button>
-						</div>
-					</div>
-
-					<div class="block-arrow">
-						<div>
-							&nbsp;
-						</div>
-
-						<div>
-							<a href="#arrow-up" class="scrollto"> <img src="~/images/uparrow_arriba_5809.png" class="arrow-up" /> </a>
-						</div>
+							&copy; 2019-2020 Антон Тимошенко - Разработка сайтов. <br>
+						</label>
 					</div>
 				</div>
-			</div>
-		</div>
-	</footer>
 
+				<!-- Форма обратной связи. -->
+				<div class="col">
+					<h6 class="mb-5">&nbsp;</h6>
+
+					<div id="order" class="form-group">
+						<div class="block-btn-send">
+							<input type="text" id="id-client-name" class="form-control mb-1 form-item" placeholder="*Ваше имя" />
+
+							<input type="text" id="id-contact" class="form-control mb-1 form-item" placeholder="*Эл. почта или телефон" />
+
+							<textarea id="id-area" class="form-control form-item mb-1" cols="2" rows="5" placeholder="*Краткое описание проекта..."></textarea>
+
+							<div class="btn-form">
+								<button id="id-btn-send"
+										type="button" 
+										class="btn btn-dark form-control-lg btn-order text-my-info" 
+										v-on:click="onSend">
+									Отправить
+								</button>
+							</div>
+						</div>
+
+						<div class="block-arrow">
+							<div>
+								&nbsp;
+							</div>
+
+							<div>
+								<a href="#arrow-up" class="scrollto"> <img src="~/images/uparrow_arriba_5809.png" class="arrow-up" /> </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="~/js/Footer.js"></script>
+	<script src="~/js/Order.js"></script>
 	<script src="~/js/Route.js"></script>
 	<script src="~/js/SlowScroll.js"></script>
 	<script src="~/js/Loader.js"></script>

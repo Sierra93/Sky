@@ -28,6 +28,33 @@ var order = new Vue({
 			catch (ex) {
 				throw new Error(ex);
 			}
-		}
+		},
+
+		// Функция отправляет заявку.
+		//onSend() {
+		//	console.log("onSend");
+		//	//let sName = $("#id-client-name").val();
+		//	//let sContact = $("#id-contact").val();
+		//	//let sArea = $("#id-area").val();
+
+		//	//let sUrl = "https://localhost:44310/api/order/create-request";
+
+		//	//try {
+		//	//	axios.post(sUrl, {
+		//	//		Name: sName,
+		//	//		EmailOrNumber: sContact,
+		//	//		Comment: sArea
+		//	//	})
+		//	//		.then((response) => {
+		//	//			console.log(response.data);
+		//	//		})
+		//	//		.catch((XMLHttpRequest) => {
+		//	//			throw new Error("Ошибка отправки заявки", XMLHttpRequest.response.data);
+		//	//		});
+		//	//}
+		//	//catch (ex) {
+		//	//	throw new Error(ex);
+		//	//}
+		//}
 	}
 });
