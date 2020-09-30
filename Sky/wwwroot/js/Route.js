@@ -6,7 +6,13 @@
 	methods: {
 		onAboutMe() {
 			window.location.href = "https://localhost:44310/about-me";
-		}		
+		}
+
+		// Функция записывает заготовку в сообщение.
+		//onSetBodyRequest(e) {
+		//	console.log("onSetBodyRequest");
+		//	let sBody = e.target.value;
+		//}
 	}
 });
 
@@ -14,7 +20,7 @@ var header = new Vue({
 	el: "#header",
 	methods: {
 		onMain() {
-			localStorage.removeItem("bDetail"); 
+			localStorage.removeItem("bDetail");
 			window.location.href = "https://localhost:44310/index";
 		},
 
