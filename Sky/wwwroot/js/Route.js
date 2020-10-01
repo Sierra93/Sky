@@ -2,17 +2,25 @@
 	el: "#index",
 	created() {
 		localStorage.removeItem("bDetail");
+
+		// Блокирует определенные пункты меню.
+		if (window.location.href.includes("about-me")) {
+			$(".my-orders").prop("disabled", true);
+		}			
+
+		if (window.location.href.includes("portfolio")) {
+			$(".my-orders").prop("disabled", true);
+			$(".my-portfolio").prop("disabled", true);
+		}		
+
+		if (window.location.href.includes("order-details")) {
+			$(".my-orders").prop("disabled", true);
+		}	
 	},
 	methods: {
 		onAboutMe() {
 			window.location.href = "https://localhost:44310/about-me";
-		}
-
-		// Функция записывает заготовку в сообщение.
-		//onSetBodyRequest(e) {
-		//	console.log("onSetBodyRequest");
-		//	let sBody = e.target.value;
-		//}
+		}		
 	}
 });
 

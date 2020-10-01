@@ -21,8 +21,14 @@ namespace Sky.Core.Constants {
 
         public const string SEO = "Продвижение сайтов";
 
-        public const string SETTINGS_YANDEX = "Настройка Яндекс.Директ";
+        public const string YANDEX = "Настройка Яндекс.Директ";
 
-        public const string SETTINGS_GOOGLE = "Настройка Google Adwords";
+        public const string GOOGLE = "Настройка Google Adwords";
+
+        public const string WEB_APP = "Веб-приложение";
+
+        public const string CLIENT_SERVER = "Клиент-серверное приложение";
+
+        public const string MOBILE_APP = "Мобильное приложение";
     }
 }

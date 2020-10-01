@@ -28,20 +28,47 @@ var order = new Vue({
 			catch (ex) {
 				throw new Error(ex);
 			}
+		},
+
+		// Функция записывает заготовку в сообщение.
+		onSetBodyRequest(sKey) {
+			switch (sKey) {
+				case "lp":
+					$("#id-area").val("Здравствуйте. Хочу заказать Landing Page.");
+					break;
+
+				case "site-viz":
+					$("#id-area").val("Здравствуйте. Хочу заказать сайт-визитку.");
+					break;
+
+				case "personal":
+					$("#id-area").val("Здравствуйте. Хочу заказать персональный сайт.");
+					break;
+
+				case "corporate":
+					$("#id-area").val("Здравствуйте. Хочу заказать корпоративный сайт.");
+					break;
+
+				case "shop":
+					$("#id-area").val("Здравствуйте. Хочу заказать интернет-магазин.");
+					break;
+
+				case "design":
+					$("#id-area").val("Здравствуйте. Хочу заказать редизайн существующего сайта.");
+					break;
+
+				case "seo":
+					$("#id-area").val("Здравствуйте. Хочу заказать продвижение сайта.");
+					break;
+
+				case "yandex":
+					$("#id-area").val("Здравствуйте. Хочу заказать настройку рекламы в Яндекс.Директ.");
+					break;
+
+				case "google":
+					$("#id-area").val("Здравствуйте. Хочу заказать настройку рекламы в Google.");
+					break;
+			}
 		}
 	}
 });
-
-//var block_services = new Vue({
-//	el: ".block-services",
-//	data: {
-		
-//	},
-//	methods: {	
-//		// Функция записывает заготовку в сообщение.
-//		onSetBodyRequest(e) {
-//			console.log("onSetBodyRequest");
-//			let sBody = e.target.value;
-//		}
-//	}
-//});

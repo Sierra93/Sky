@@ -151,7 +151,8 @@ body {
   font-size: 15px;
   letter-spacing: normal;
   font-family: monospace;
-  margin: 0px 64px 20px calc((100% - 490px) * 1); }
+  margin: 0px 64px 20px calc((100% - 490px) * 1);
+  /*margin: 0px 64px 20px calc((50% - 490px) * 5);*/ }
 
 .filter {
   margin: 0px 0px 64px calc((46% - 490px) * 1); }
@@ -166,6 +167,7 @@ body {
 
 .block-name {
   margin: 0px 0px 64px calc((100% - 490px) * 1);
+  /*margin: 0px 0px 64px calc((50% - 490px) * 5);*/
   border-top: 2px solid black;
   width: 40px;
   margin-bottom: 5%; }
@@ -220,6 +222,9 @@ body {
   padding: 0;
   margin-bottom: 387px; }
 
+.about-me {
+  margin: 0px 64px 20px calc((50% - 490px) * 5); }
+
 .my-services {
   letter-spacing: 0.1em;
   font-weight: 900;
@@ -229,7 +234,7 @@ body {
   font-family: arial black,arial-w01-black,arial-w02-black,arial-w10 black,sans-serif;
   border-top: 2px solid black;
   width: 40px;
-  margin: 0px 0px 64px calc((100% - 490px) * 1); }
+  margin: 0px 0px 64px calc((90% - 490px) * 1); }
 
 footer {
   background: #57BBBF; }
@@ -240,7 +245,7 @@ footer {
     line-height: normal;
     margin-bottom: 0; }
   footer .contact-me-details {
-    margin: 0px 0px 64px calc((100% - 490px) * 1); }
+    margin: 0px 0px 64px calc((90% - 490px) * 1); }
     footer .contact-me-details .form-control-sm {
       font-size: 15px; }
   footer .form-item {
@@ -295,7 +300,7 @@ footer {
   display: flex;
   margin-bottom: 5%; }
   .list-works .my-foto {
-    width: 600px; }
+    width: 400px; }
     .list-works .my-foto:hover {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
@@ -335,6 +340,9 @@ footer {
 /*.hide {
     display: none;
 }*/
+.no-cursor:hover {
+  cursor: not-allowed; }
+
 /* Стили для адаптивности */
 /* xs (<=543px) */
 @media (max-width: 575px) {
@@ -359,7 +367,7 @@ footer {
   .name {
     font-size: 30px; }
   .my-foto {
-    width: 100%; }
+    width: 400px; }
   .my-services {
     margin: 20px;
     font-size: 30px; }

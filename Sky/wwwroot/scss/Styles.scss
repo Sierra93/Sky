@@ -209,6 +209,7 @@ body {
     letter-spacing: normal;
     font-family: monospace;
     margin: 0px 64px 20px calc((100% - 490px) * 1);
+    /*margin: 0px 64px 20px calc((50% - 490px) * 5);*/
 }
 
 // Фил  ьтры категорий работ.
@@ -230,6 +231,7 @@ body {
 
 .block-name {
     margin: 0px 0px 64px calc((100% - 490px) * 1);
+    /*margin: 0px 0px 64px calc((50% - 490px) * 5);*/
     border-top: 2px solid black;
     width: 40px;
     margin-bottom: 5%;
@@ -291,6 +293,10 @@ body {
     margin-bottom: 387px;
 }
 
+.about-me {
+    margin: 0px 64px 20px calc((50% - 490px) * 5);
+}
+
 .my-services {
     letter-spacing: 0.1em;
     font-weight: 900;
@@ -300,7 +306,7 @@ body {
     font-family: arial black,arial-w01-black,arial-w02-black,arial-w10 black,sans-serif;
     border-top: 2px solid black;
     width: 40px;
-    margin: 0px 0px 64px calc((100% - 490px) * 1);
+    margin: 0px 0px 64px calc((90% - 490px) * 1);
 }
 
 // Стили футера.
@@ -316,7 +322,7 @@ footer {
     }
 
     .contact-me-details {
-        margin: 0px 0px 64px calc((100% - 490px) * 1);
+        margin: 0px 0px 64px calc((90% - 490px) * 1);
 
         .form-control-sm {
             font-size: 15px;
@@ -394,7 +400,7 @@ footer {
     margin-bottom: 5%;
 
     .my-foto {
-        width: 600px;
+        width: 400px;
 
         &:hover {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -451,6 +457,12 @@ footer {
     display: none;
 }*/
 
+.no-cursor {
+    &:hover {
+        cursor: not-allowed;
+    }
+}
+
 /* Стили для адаптивности */
 /* xs (<=543px) */
 @media (max-width: 575px) {
@@ -495,7 +507,8 @@ footer {
     }
 
     .my-foto {
-        width: 100%;
+        //width: 100%;
+        width: 400px;
     }
 
     .my-services {

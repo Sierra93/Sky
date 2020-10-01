@@ -10,303 +10,336 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 </head>
 <body>
-	@*<div id="index">*@
-		<a id="arrow-up"></a>
+	<a id="arrow-up"></a>
 
-		<section class="about">
-			<video class="video" loop="loop" autoplay="">
-				<source src="/video/file.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-			</video>
+	<section class="about">
+		<video class="video" loop="loop" autoplay="">
+			<source src="/video/file.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+		</video>
 
-			<div class="about-title">
-				<p class="font_7 text-center">
-					<span class="do-span">УСПЕХ —&nbsp;ЭТО НАУКА, ЕСЛИ У ВАС ЕСТЬ УСЛОВИЯ, ВЫ ПОЛУЧИТЕ</span>
-				</p>
+		<div class="about-title">
+			<p class="font_7 text-center">
+				<span class="do-span">УСПЕХ —&nbsp;ЭТО НАУКА, ЕСЛИ У ВАС ЕСТЬ УСЛОВИЯ, ВЫ ПОЛУЧИТЕ</span>
+			</p>
 
-				<h3 class="font_3 text-center">
-					<span>
-						<span>РЕЗУЛЬТАТ</span>
-					</span>
-				</h3>
-				@*<div class="text-center">
-						<a href="#send" class="scrollto btn btn-dark form-control btn-order">Заказать сайт</a>
-					</div>*@
+			<h3 class="font_3 text-center">
+				<span>
+					<span>РЕЗУЛЬТАТ</span>
+				</span>
+			</h3>
 
-				<div class="btn-form">
-					@*<button type="button" class="btn btn-dark form-control-lg btn-order text-my-info">
-							Заказать сайт
-						</button>*@
-					<a href="#send" class="scrollto btn btn-dark form-control btn-order">Заказать сайт</a>
-				</div>
-			</div>
-		</section>
-
-		<!-- Секция обо мне -->
-		<div id="index" class="me">
-			<div class="row block-with-ya">
-				<div class="col my-info-title">
-					<div class="block-name mt-5">
-						<h4 class="name">Антон<br /> Тимошенко</h4>
-					</div>
-
-					<p class="text-my-info">
-						Меня зовут Антон. Я живу в Москве, и являюсь частным Full-stack разработчиком. Опыт в разработке 5 лет, поэтому мне есть, что вам предложить. Могу заключить договор оказания услуг.
-						Создаю проекты любой сложности, начиная от сайта-визитки заканчивая индивидуальным проектом!
-					</p>
-
-					<button type="button" class="btn btn-dark form-control-lg btn-order text-my-info" v-on:click="onAboutMe">
-						Подробнее
-					</button>
-				</div>
-
-				<div class="col">
-					<img class="my-foto" src="~/images/ya.gQuVX.jpg" />
-				</div>
+			<div class="btn-form">
+				<a href="#send" class="scrollto btn btn-dark form-control btn-order">Заказать сайт</a>
 			</div>
 		</div>
+	</section>
 
-		<!-- Вторая секция. -->
-		<div id="order" class="about about-two">
-			<a id="orders"></a>
-			<img class="video img-fon-two" src="~/images/84770f_0cf5b6c1550a4b8c92f92f1064cc68de_mv2.webp" />
+	<!-- Секция обо мне -->
+	<div id="index" class="me">
+		<div class="row block-with-ya">
+			<div class="col my-info-title">
+				<div class="block-name mt-5 about-me">
+					<h4 class="name">Антон<br /> Тимошенко</h4>
+				</div>
 
-			<div class="about-title nop">
-				<div class="me">
-					<div class="row">
-						<div class="col">
-							<h4 class="my-services mt-5">Мои услуги</h4>
-						</div>
+				<p class="text-my-info about-me">					
+					Меня зовут Антон. Я живу в Москве, и являюсь частным Full-stack разработчиком. Опыт в разработке 5 лет, поэтому мне есть, что вам предложить. Могу заключить договор оказания услуг.
+					Создаю проекты любой сложности, начиная от сайта-визитки заканчивая индивидуальным проектом!
+					Беру предоплату 10% на все услуги, кроме индивидуальных. Если идет заказ индивидуальных проектов, то беру предоплату 50%.
+				</p>
 
-						<div class="col">
+				<button type="button" 
+						class="btn btn-dark form-control-lg btn-order text-my-info about-me"
+						v-on:click="onAboutMe">
+					Подробнее
+				</button>
+			</div>
 
-						</div>
+			<div class="">
+				<img width="400" class="my-foto" src="~/images/it's ya.jpg" />
+			</div>
+		</div>
+	</div>
+
+	<!-- Вторая секция. -->
+	<div id="order" class="about about-two">
+		<a id="orders"></a>
+		<img class="video img-fon-two" src="~/images/84770f_0cf5b6c1550a4b8c92f92f1064cc68de_mv2.webp" />
+
+		<div class="about-title nop">
+			<div class="me">
+				<div class="row">
+					<div class="col">
+						<h4 class="my-services mt-5">Мои услуги</h4>
 					</div>
 
-					<div class="row services">
-						<nav class="nav nav-pills flex-column flex-sm-row text-center">
-							<!-- Секция табов.-->
-							<div class="nav-services">
-								<ul class="nav nav-tabs mb-3">
-									<li class="nav-item">
-										<a class="nav-link active" data-toggle="tab" href="#develop">Разработка сайтов</a>
-									</li>
+					<div class="col">
 
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#design">Продвижение и редизайн</a>
-									</li>
+					</div>
+				</div>
 
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#indi-develop">Индивидуальная разработка</a>
-									</li>
-								</ul>
+				<div class="row services">
+					<nav class="nav nav-pills flex-column flex-sm-row text-center">
+						<!-- Секция табов.-->
+						<div class="nav-services">
+							<ul class="nav nav-tabs mb-3">
+								<li class="nav-item">
+									<a class="nav-link active" data-toggle="tab" href="#develop">Разработка сайтов</a>
+								</li>
 
-								<!-- Тело табов. -->
-								<div class="tab-content">
-									<div class="tab-pane fade active show" id="develop">
-										<div class="row">
-											<div class="block-services">
-												<div class="service-1">
-													<h3 class="service-item" v-on:click="GetOrder('lp')">
-														Landing Page
-													</h3>
+								<li class="nav-item">
+									<a class="nav-link" data-toggle="tab" href="#design">Продвижение и редизайн</a>
+								</li>
 
-													<p>Срок: от 3-х дней</p>
+								<li class="nav-item">
+									<a class="nav-link" data-toggle="tab" href="#indi-develop">Индивидуальная разработка</a>
+								</li>
+							</ul>
 
-													<p>Стоимость: от 5 000 руб.</p>
+							<!-- Тело табов. -->
+							<div class="tab-content">
+								<div class="tab-pane fade active show" id="develop">
+									<div class="row">
+										<div class="block-services">
+											<div class="service-1">
+												<h3 class="service-item" v-on:click="GetOrder('lp')">
+													Landing Page
+												</h3>
 
-													<button type="button"
-															class="btn btn-dark form-control-lg btn-order not-margin text-my-info"
-															_v-on:click="onSetBodyRequest('lp')">
-														Заказать
-													</button>
+												<p>Срок: от 3-х дней</p>
+
+												<p>Стоимость: от 5 000 руб.</p>
+	
+												<div class="btn-form">
+													<a href="#send"
+													   class="scrollto btn btn-dark form-control-lg btn-order not-margin text-my-info"
+													   v-on:click="onSetBodyRequest('lp')">
+														Заказать сайт
+													</a>
 												</div>
+											</div>
 
-												<div class="service-1">
-													<h3 class="service-item" v-on:click="GetOrder('site-viz')">
-														Сайт-визитка
-													</h3>
+											<div class="service-1">
+												<h3 class="service-item" v-on:click="GetOrder('site-viz')">
+													Сайт-визитка
+												</h3>
 
-													<p>Срок: от 2-х дней</p>
+												<p>Срок: от 2-х дней</p>
 
-													<p>Стоимость: от 7 000 руб.</p>
-
-													<button type="button"
-															class="btn btn-dark form-control-lg btn-order not-margin text-my-info"
-															_v-on:click="onSetBodyRequest('site-viz')">
-														Заказать
-													</button>
+												<p>Стоимость: от 7 000 руб.</p>
+				
+												<div class="btn-form">
+													<a href="#send"
+													   class="scrollto btn btn-dark form-control-lg btn-order not-margin text-my-info"
+													   v-on:click="onSetBodyRequest('site-viz')">
+														Заказать сайт
+													</a>
 												</div>
+											</div>
 
-												<div class="service-1">
-													<h3 class="service-item" v-on:click="GetOrder('personal')">
-														Персональный сайт
-													</h3>
+											<div class="service-1">
+												<h3 class="service-item" v-on:click="GetOrder('personal')">
+													Персональный сайт
+												</h3>
 
-													<p>Срок: от 3-х дней</p>
+												<p>Срок: от 3-х дней</p>
 
-													<p>Стоимость: от 10 000 руб.</p>
+												<p>Стоимость: от 10 000 руб.</p>
 
-													<button type="button"
-															class="btn btn-dark form-control-lg btn-order not-margin text-my-info"
-															_v-on:click="onSetBodyRequest('personal')">
-														Заказать
-													</button>
+												<div class="btn-form">
+													<a href="#send"
+													   class="scrollto btn btn-dark form-control-lg btn-order not-margin text-my-info"
+													   v-on:click="onSetBodyRequest('personal')">
+														Заказать сайт
+													</a>
 												</div>
+											</div>
 
-												<div class="service-1">
-													<h3 class="service-item" v-on:click="GetOrder('corporate')">
-														Корпоративный сайт
-													</h3>
+											<div class="service-1">
+												<h3 class="service-item" v-on:click="GetOrder('corporate')">
+													Корпоративный сайт
+												</h3>
 
-													<p>Срок: от 1 недели</p>
+												<p>Срок: от 1 недели</p>
 
-													<p>Стоимость: от 15 000 руб.</p>
+												<p>Стоимость: от 15 000 руб.</p>
 
-													<button type="button"
-															class="btn btn-dark form-control-lg btn-order not-margin text-my-info"
-															_v-on:click="onSetBodyRequest('corporate')">
-														Заказать
-													</button>
+												<div class="btn-form">
+													<a href="#send"
+													   class="scrollto btn btn-dark form-control-lg btn-order not-margin text-my-info"
+													   v-on:click="onSetBodyRequest('corporate')">
+														Заказать сайт
+													</a>
 												</div>
+											</div>
 
-												<div class="service-1">
-													<h3 class="service-item" v-on:click="GetOrder('shop')">
-														Интернет-магазин
-													</h3>
+											<div class="service-1">
+												<h3 class="service-item" v-on:click="GetOrder('shop')">
+													Интернет-магазин
+												</h3>
 
-													<p>Срок: от 3 недель</p>
+												<p>Срок: от 3 недель</p>
 
-													<p>Стоимость: от 20 000 руб.</p>
+												<p>Стоимость: от 20 000 руб.</p>
 
-													<button type="button"
-															class="btn btn-dark form-control-lg btn-order not-margin text-my-info"
-															_v-on:click="onSetBodyRequest('shop')">
-														Заказать
-													</button>
+												<div class="btn-form">
+													<a href="#send"
+													   class="scrollto btn btn-dark form-control-lg btn-order not-margin text-my-info"
+													   v-on:click="onSetBodyRequest('shop')">
+														Заказать сайт
+													</a>
 												</div>
 											</div>
 										</div>
 									</div>
+								</div>
 
-									<!-- Продвижение и редизайн. -->
-									<div class="tab-pane fade" id="design">
-										<div class="row">
-											<div class="block-services">
-												<div class="service-1">
-													<h3 class="service-item">Редизайн сайтов</h3>
+								<!-- Продвижение и редизайн. -->
+								<div class="tab-pane fade" id="design">
+									<div class="row">
+										<div class="block-services">
+											<div class="service-1">
+												<h3 class="service-item" v-on:click="GetOrder('design')">
+													Редизайн сайтов
+												</h3>
 
-													<p>Срок: от 1 дня дня</p>
+												<p>Срок: от 1 дня дня</p>
 
-													<p>Стоимость: от 1 000 руб.</p>
+												<p>Стоимость: от 1 000 руб.</p>
 
-													<button type="button"
-															class="btn btn-dark form-control-lg btn-order not-margin text-my-info"
-															_v-on:click="onSetBodyRequest('design')">
-														Заказать
-													</button>
+												<div class="btn-form">
+													<a href="#send"
+													   class="scrollto btn btn-dark form-control-lg btn-order not-margin text-my-info"
+													   v-on:click="onSetBodyRequest('design')">
+														Заказать сайт
+													</a>
 												</div>
+											</div>
 
-												<div class="service-1">
-													<h3 class="service-item">Продвижение сайтов</h3>
+											<div class="service-1">
+												<h3 class="service-item" v-on:click="GetOrder('seo')">
+													Продвижение сайтов
+												</h3>
 
-													<p>Сумма в мес.</p>
+												<p>Сумма в мес.</p>
 
-													<p>Стоимость: от 10 000 руб. (в мес.)</p>
+												<p>Стоимость: от 10 000 руб. (в мес.)</p>
 
-													<button type="button"
-															class="btn btn-dark form-control-lg btn-order not-margin text-my-info"
-															_v-on:click="onSetBodyRequest('seo')">
-														Заказать
-													</button>
+												<div class="btn-form">
+													<a href="#send"
+													   class="scrollto btn btn-dark form-control-lg btn-order not-margin text-my-info"
+													   v-on:click="onSetBodyRequest('seo')">
+														Заказать сайт
+													</a>
 												</div>
+											</div>
 
-												<div class="service-1">
-													<h3 class="service-item">Настройка Яндекс.Директ</h3>
+											<div class="service-1">
+												<h3 class="service-item" v-on:click="GetOrder('yandex')">
+													Настройка Яндекс.Директ
+												</h3>
 
-													<p>Сумма в мес.</p>
+												<p>Сумма в мес.</p>
 
-													<p>Стоимость: от 10 000 руб. (в мес.)</p>
+												<p>Стоимость: от 10 000 руб. (в мес.)</p>
 
-													<button type="button"
-															class="btn btn-dark form-control-lg btn-order not-margin text-my-info"
-															_v-on:click="onSetBodyRequest('yandex')">
-														Заказать
-													</button>
+												<div class="btn-form">
+													<a href="#send"
+													   class="scrollto btn btn-dark form-control-lg btn-order not-margin text-my-info"
+													   v-on:click="onSetBodyRequest('yandex')">
+														Заказать сайт
+													</a>
 												</div>
+											</div>
 
-												<div class="service-1">
-													<h3 class="service-item">Настройка Google Adwords</h3>
+											<div class="service-1">
+												<h3 class="service-item" v-on:click="GetOrder('google')">
+													Настройка Google Adwords
+												</h3>
 
-													<p>Сумма в мес.</p>
+												<p>Сумма в мес.</p>
 
-													<p>Стоимость: от 10 000 руб. (в мес.)</p>
+												<p>Стоимость: от 10 000 руб. (в мес.)</p>
 
-													<button type="button"
-															class="btn btn-dark form-control-lg btn-order not-margin text-my-info"
-															_v-on:click="onSetBodyRequest('google')">
-														Заказать
-													</button>
+												<div class="btn-form">
+													<a href="#send"
+													   class="scrollto btn btn-dark form-control-lg btn-order not-margin text-my-info"
+													   v-on:click="onSetBodyRequest('google')">
+														Заказать сайт
+													</a>
 												</div>
 											</div>
 										</div>
 									</div>
+								</div>
 
-									<!-- Индивидуальная разработка. -->
-									<div class="tab-pane fade" id="indi-develop">
-										<div class="row">
-											<div class="block-services">
-												<div class="service-1">
-													<h3 class="service-item">Веб-приложение <br /> (в т.ч. ERP, CRM как SaaS-решение)</h3>
+								<!-- Индивидуальная разработка. -->
+								<div class="tab-pane fade" id="indi-develop">
+									<div class="row">
+										<div class="block-services">
+											<div class="service-1">
+												<h3 class="service-item" v-on:click="GetOrder('web_app')">
+													Веб-приложение <br /> (в т.ч. ERP, CRM как SaaS-решение)
+												</h3>
 
-													<p>Срок: После ТЗ.</p>
+												<p>Срок: После ТЗ.</p>
 
-													<p>Стоимость: После ТЗ.</p>
+												<p>Стоимость: После ТЗ.</p>
 
-													<button type="button"
-															class="btn btn-dark form-control-lg btn-order not-margin text-my-info"
-															_v-on:click="onSetBodyRequest('web_app')">
-														Заказать
-													</button>
+												<div class="btn-form">
+													<a href="#send"
+													   class="scrollto btn btn-dark form-control-lg btn-order not-margin text-my-info"
+													   v-on:click="onSetBodyRequest('web_app')">
+														Заказать сайт
+													</a>
 												</div>
+											</div>
 
-												<div class="service-1">
-													<h3 class="service-item">Клиент-серверное приложение <br /> (в т.ч. ERP, CRM как Stand-Alone-решение)</h3>
+											<div class="service-1">
+												<h3 class="service-item" v-on:click="GetOrder('client_server')">
+													Клиент-серверное приложение <br /> (в т.ч. ERP, CRM как Stand-Alone-решение)
+												</h3>
 
-													<p>Срок: После ТЗ.</p>
+												<p>Срок: После ТЗ.</p>
 
-													<p>Стоимость: После ТЗ.</p>
-
-													<button type="button"
-															class="btn btn-dark form-control-lg btn-order not-margin text-my-info"
-															_v-on:click="onSetBodyRequest('client_server')">
-														Заказать
-													</button>
+												<p>Стоимость: После ТЗ.</p>
+										
+												<div class="btn-form">
+													<a href="#send"
+													   class="scrollto btn btn-dark form-control-lg btn-order not-margin text-my-info"
+													   v-on:click="onSetBodyRequest('client_server')">
+														Заказать сайт
+													</a>
 												</div>
+											</div>
 
-												<div class="service-1">
-													<h3 class="service-item">Мобильное приложение <br /> под (IOS, Android)</h3>
+											<div class="service-1">
+												<h3 class="service-item" v-on:click="GetOrder('mobile_app')">
+													Мобильное приложение <br /> под (IOS, Android)
+												</h3>
 
-													<p>Срок: После ТЗ.</p>
+												<p>Срок: После ТЗ.</p>
 
-													<p>Стоимость: После ТЗ.</p>
+												<p>Стоимость: После ТЗ.</p>
 
-													<button type="button"
-															class="btn btn-dark form-control-lg btn-order not-margin text-my-info"
-															_v-on:click="onSetBodyRequest('mobile_app')">
-														Заказать
-													</button>
+												<div class="btn-form">
+													<a href="#send"
+													   class="scrollto btn btn-dark form-control-lg btn-order not-margin text-my-info"
+													   v-on:click="onSetBodyRequest('mobile_app')">
+														Заказать сайт
+													</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</nav>
-					</div>
+						</div>
+					</nav>
 				</div>
 			</div>
 		</div>
-	@*</div>*@
+	</div>
 
 	<script src="~/js/Order.js"></script>
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>

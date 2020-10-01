@@ -50,12 +50,24 @@ namespace Sky.Services {
                     param = OrderType.SEO;
                     break;
 
-                case "setting-yandex":
-                    param = OrderType.SETTINGS_YANDEX;
+                case "yandex":
+                    param = OrderType.YANDEX;
                     break;
 
-                case "setting-google":
-                    param = OrderType.SETTINGS_GOOGLE;
+                case "google":
+                    param = OrderType.GOOGLE;
+                    break;
+
+                case "web_app":
+                    param = OrderType.WEB_APP;
+                    break;
+
+                case "client_server":
+                    param = OrderType.CLIENT_SERVER;
+                    break;
+
+                case "mobile_app":
+                    param = OrderType.MOBILE_APP;
                     break;
             }
 
