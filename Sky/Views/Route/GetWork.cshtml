@@ -4,6 +4,12 @@
 	<title> Антон Тимошенко - Портфолио </title>
 	<link href="~/css/Styles.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+	<script src="/lib/highslide/highslide.js" type="text/javascript"></script>
+	<link href="/lib/highslide/highslide.css" rel="stylesheet" property="stylesheet" />
+	<script type="text/javascript">
+		hs.graphicsDir = '/lib/highslide/graphics/';
+		hs.wrapperClassName = 'your-own-style';
+	</script>
 </head>
 <body>
 	<a id="arrow-up"></a>
@@ -26,7 +32,9 @@
 						</div>
 
 						<div class="col">
-							<img class="my-foto" :src="el.url" />
+							<a :href="el.url" class="highslide" onclick="return hs.expand(this)">
+								<img class="my-foto" :src="el.url" />
+							</a>
 						</div>
 					</div>
 				</div>

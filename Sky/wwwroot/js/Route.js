@@ -19,7 +19,7 @@
 	},
 	methods: {
 		onAboutMe() {
-			window.location.href = "https://devmyprojects24.xyz/about-me";
+			window.location.href = "https://localhost:44310/about-me";
 		}		
 	}
 });
@@ -29,15 +29,15 @@ var header = new Vue({
 	methods: {
 		onMain() {
 			localStorage.removeItem("bDetail");
-			window.location.href = "https://devmyprojects24.xyz/index";
+			window.location.href = "https://localhost:44310/index";
 		},
 
 		onAboutMe() {
-			window.location.href = "https://devmyprojects24.xyz/about-me";
+			window.location.href = "https://localhost:44310/about-me";
 		},
 
 		onPortfolio() {
-			window.location.href = "https://devmyprojects24.xyz/portfolio";
+			window.location.href = "https://localhost:44310/portfolio";
 		}
 	}
 });
