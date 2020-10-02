@@ -11,6 +11,13 @@
 <body>
 	<script src="https://unpkg.com/vue"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+	<div class="mask">
+		<div class="loader">
+
+		</div>
+	</div>
+
 	<header id="header">
 		@*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">*@
 		<!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
@@ -89,7 +96,7 @@
 		</nav>-->
 
 		<nav class="navbar navbar-light fixed-top bg-light justify-content-around">
-			<a class="nav-link text-dark person" asp-controller="Route" asp-action="Index">
+			<a class="nav-link text-dark person" v-on:click="onMain">
 				<strong>Антон Тимошенко</strong><br />
 				Разработка сайтов
 			</a>
@@ -104,17 +111,17 @@
 					Обо мне
 				</button>
 
-				<button class="btn btn-link" type="button">
-					Мои услуги
-				</button>
+				<a href="#orders" class="scrollto my-orders-link">
+					<button class="btn btn-link my-orders">Мои услуги</button>
+				</a>
 
-				<button class="btn btn-link" type="button">
+				<button class="btn btn-link my-portfolio" type="button" v-on:click="onPortfolio">
 					Портфолио
 				</button>
 
-				<button class="btn btn-link" type="button">
-					Контакты
-				</button>
+				<a href="#contacts" class="scrollto">
+					<button class="btn btn-link">Контакты</button>
+				</a>
 
 				@*<ul class="navbar-nav flex-grow-1 head-2">
 						<li class="nav-item person">
@@ -155,59 +162,110 @@
 
 	<!-- Секция футера. -->
 	<a id="send"></a>
-	<footer class="footer">
-		<div class="row">
-			<div class="col">
-				<h6 class="my-services mt-5 contact-me">Свяжитесь <br />со мной</h6>
+	<a id="contacts"></a>
+	<div id="footer">
+		<footer class="footer">
+			<div class="row">
+				<div class="col">
+					<h6 class="my-services mt-5 contact-me">Свяжитесь <br />со мной</h6>
 
-				<div class="contact-me-details">
-					<label class="form-control-sm">
-						Тел. и WhatsApp: +7 (985) 683 80 46 <br>
+					<div class="contact-me-details">
+						<label class="form-control-sm">
+							Тел. и WhatsApp: +7 (985) 683 80 46 <br>
 
-						E-mail: <a class="brief" href="mailto:#"> skyhorizen@skyhorizen.ru </a><br />
+							E-mail: <a class="brief" href="mailto:#"> sierra_93@mail.ru </a><br />
 
-						Социальные сети: <a class="brief" href="https://vk.com/skyhorizen"> ВКонтакте </a><br>
+							Социальные сети: <a class="brief" href="https://vk.com/skyhorizen"> ВКонтакте </a><br>
 
-						Пн. – Вс. С 10:00 до 23:00 <br>
+							Пн. – Вс. С 10:00 до 23:00 <br>
 
-						&copy; 2019-2020 Антон Тимошенко - Разработка сайтов. <br>
-					</label>
+							&copy; 2019-2020 Антон Тимошенко - Разработка сайтов. <br>
+						</label>
+					</div>
+				</div>
+
+				<!-- Форма обратной связи. -->
+				<div class="col">
+					<h6 class="mb-5">&nbsp;</h6>
+
+					<div id="order" class="form-group">
+						<div class="block-btn-send">
+							<input type="text" id="id-client-name" class="form-control mb-1 form-item" placeholder="*Ваше имя" />
+
+							<input type="text" id="id-contact" class="form-control mb-1 form-item" placeholder="*Эл. почта или телефон" />
+
+							<textarea id="id-area" class="form-control form-item mb-1" cols="2" rows="5" placeholder="*Краткое описание проекта..."></textarea>
+
+							<div class="btn-form">
+								<button id="id-btn-send"
+										type="button"
+										class="btn btn-dark form-control-lg btn-order text-my-info"
+										v-on:click="onSend">
+									Отправить
+								</button>
+							</div>
+						</div>
+
+						<div class="block-arrow">
+							<div>
+								&nbsp;
+							</div>
+
+							<div>
+								<a href="#arrow-up" class="scrollto"> <img src="~/images/uparrow_arriba_5809.png" class="arrow-up" /> </a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
+		</footer>
+	</div>
 
-			<!-- Форма обратной связи. -->
-			<div class="col">
-				<h6 class="mb-5">&nbsp;</h6>
-
-				<div class="form-group">
-					<input type="text" class="form-control mb-1 form-item" placeholder="*Ваше имя" />
-
-					<input type="text" class="form-control mb-1 form-item" placeholder="*Эл. почта или телефон" />
-
-					<textarea class="form-control form-item mb-1" cols="2" rows="5" placeholder="*Краткое описание проекта..."></textarea>
-
-					<div class="btn-form">
-						<button type="button" class="btn btn-dark form-control-lg btn-order text-my-info">
-							Заказать сайт
-						</button>
-					</div>
-
-					<div class="block-arrow">
-						<div>
-							&nbsp;
-						</div>
-
-						<div>
-							<a href="#arrow-up" class="scrollto"> <img src="~/images/uparrow_arriba_5809.png" class="arrow-up" /> </a>
-						</div>
-					</div>
+	<!-- Модальное окно ошибки заполнения полей. -->
+	<div class="modal fade" id="id-send-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Ошибка</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Не все обязательные поля заполнены.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Ясно</button>
 				</div>
 			</div>
 		</div>
-	</footer>
+	</div>
 
+	<!-- Модальное окно успешной отправки заявки. -->
+	<div class="modal fade" id="id-access-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Успешно</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Спасибо! Заявка отправлена! В ближайшее время я свяжусь с вами.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Ясно</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="~/js/Footer.js"></script>
+	@*<script src="~/js/Order.js"></script>*@
 	<script src="~/js/Route.js"></script>
 	<script src="~/js/SlowScroll.js"></script>
+	<script src="~/js/Loader.js"></script>
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/site.js" asp-append-version="true"></script>

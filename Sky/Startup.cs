@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Sky.Core;
+using Sky.Core.Data;
 
 namespace Sky {
     public class Startup {
@@ -20,6 +23,19 @@ namespace Sky {
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             services.AddControllersWithViews();
+            services.AddDbContext<ApplicationDbContext>(options =>
+               options.UseSqlServer(
+                   Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("Sky")));
+
+            //services.AddCors(options => options.AddPolicy("ApiCorsPolicy", builder => {
+            //    builder.WithOrigins("https://devmyprojects24.xyz/", "https://devmyprojects24.xyz").AllowAnyMethod().AllowAnyHeader();
+            //}));
+
+            services.AddMvc(option => option.EnableEndpointRouting = false);
+
+            services.AddControllers()
+        .AddJsonOptions(options =>
+                options.JsonSerializerOptions.Converters.Add(new IntToStringExtension()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

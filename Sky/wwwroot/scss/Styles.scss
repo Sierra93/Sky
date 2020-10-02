@@ -8,7 +8,7 @@
     padding-left: 32px;
     /* margin-right: 32px; */
     margin-bottom: 32px;
-    margin: 0 5px;
+    margin: 0 5px 5px;
 }
 
 .container {
@@ -23,6 +23,12 @@ body {
     font-family: Arial,Helvetica,sans-serif;
 }
 
+.scroll-pane {
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+}
+
 .header-video {
     height: 800px;    
 }
@@ -32,7 +38,11 @@ body {
     text-decoration: none;
     text-align: center;
     font-size: 17px;
-    font-family: monospace;    
+    font-family: monospace;
+
+    &:hover {
+        cursor: pointer;
+    }
 
     strong {
         font-weight: 900;
@@ -56,6 +66,10 @@ body {
     text-decoration: none;
     font-size: 17px;
     transition: 0.5s;
+
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 .font_7 {
@@ -82,13 +96,9 @@ body {
 
 // Для текста на фоне видео.
 .about {
-    //padding: 300px 0;
     padding: 200px 0;
-    //background-color: #0d2562;
-    //color: #fff;
     overflow: hidden;
     position: relative;
-    //height: 100vh;
 }
 
 .about-title {
@@ -101,12 +111,13 @@ body {
 /* VIDEO */
 .video {
     top: 50%;
-    width: 1938px;
+    //width: 1938px;
     transform: translate(-50%, -50%);
     //opacity: 0.5;
     left: 50%;
     z-index: 0;
     position: absolute;
+    height: 100%;
 }
 
 .about-header {
@@ -114,9 +125,6 @@ body {
     top: 0;
     width: 100%;
     height: 110px;
-    /*-webkit-background-size: cover;
-    background-size: cover;*/
-    /*background: url(https://denis-creative.com/wp-content/uploads/2018/01/about-header-bg.png) 0 top no-repeat;*/
 }
 
 .about-footer {
@@ -124,9 +132,6 @@ body {
     bottom: 0;
     width: 100%;
     height: 126px;
-    /*-webkit-background-size: cover;
-    background-size: cover;*/
-    /*background: url(https://denis-creative.com/wp-content/uploads/2018/01/about-footer-bg.png) 0 top no-repeat;*/
 }
 
 .about-header-bg-2 {
@@ -141,17 +146,12 @@ body {
 }
 
 @media (max-width: 768px) {
-    /*.about {*/
-        /*background: url(https://denis-creative.com/wp-content/uploads/2018/01/about-bg.jpg) 0 top no-repeat #0e438b;*/
-        /*-webkit-background-size: cover;
-        background-size: cover;
-    }*/
-
     .video,
     .about-header,
     .about-footer,
     .about-header-bg-2 {
         display: none;
+        height: 100%;
     }
 }
 
@@ -163,7 +163,7 @@ body {
 
 // Кнопка заказать сайт.
 .btn-order {
-    width: 150px;
+    width: 151px;
     background-color: #23272b;
     border-radius: inherit;
     border-width: 2px;
@@ -199,20 +199,8 @@ body {
 .border {
     background: none repeat scroll 0 0 black;
     display: block;
-    //height: 10px;
-    //margin-bottom: 30px;
-    //width: 100px;
     width: 40px;
     height: 5px;
-}
-
-.my-foto {
-    /*width: 712px;
-    height: 725px;*/
-}
-
-.my-info-title {
-
 }
 
 .text-my-info {
@@ -220,13 +208,33 @@ body {
     font-size: 15px;
     letter-spacing: normal;
     font-family: monospace;
-    margin: 0px 64px 64px calc((100% - 490px) * 1);
+    margin: 0px 64px 20px calc((100% - 490px) * 1);
+    /*margin: 0px 64px 20px calc((50% - 490px) * 5);*/
+}
+
+// Фил  ьтры категорий работ.
+.filter {
+    margin: 0px 0px 64px calc((46% - 490px) * 1);
+
+    .filter-item {
+        font-size: 15px;
+        letter-spacing: normal;
+        font-family: monospace;
+        margin: 0 10px;
+        text-decoration: underline;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .block-name {
     margin: 0px 0px 64px calc((100% - 490px) * 1);
+    /*margin: 0px 0px 64px calc((50% - 490px) * 5);*/
     border-top: 2px solid black;
     width: 40px;
+    margin-bottom: 5%;
 }
 
 .nop {
@@ -282,7 +290,11 @@ body {
 
 .about-two {
     padding: 0;
-    margin-bottom: 430px;
+    margin-bottom: 387px;
+}
+
+.about-me {
+    margin: 0px 64px 20px calc((50% - 490px) * 5);
 }
 
 .my-services {
@@ -294,7 +306,7 @@ body {
     font-family: arial black,arial-w01-black,arial-w02-black,arial-w10 black,sans-serif;
     border-top: 2px solid black;
     width: 40px;
-    margin: 0px 0px 64px calc((100% - 490px) * 1);
+    margin: 0px 0px 64px calc((90% - 490px) * 1);
 }
 
 // Стили футера.
@@ -310,7 +322,7 @@ footer {
     }
 
     .contact-me-details {
-        margin: 0px 0px 64px calc((100% - 490px) * 1);
+        margin: 0px 0px 64px calc((90% - 490px) * 1);
 
         .form-control-sm {
             font-size: 15px;
@@ -329,7 +341,9 @@ footer {
     .btn-form {
         display: flex;
         justify-content: center;
-        margin-right: -1%;
+        //margin-right: -11%;
+        //margin-right: -1%;
+        margin: 0px 16px 0px 5px;
     }
 
     .arrow-up {
@@ -337,11 +351,24 @@ footer {
     }
 
     .block-arrow {
-        display: flex;
+        /*display: flex;
         justify-content: space-evenly;
         margin-top: -5%;
-        margin-right: -5%;
+        //margin-right: -5%;
+        //margin-right: -17%;
+        margin-right: -7%;*/
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: -11%;
+        margin-right: -28%;
     }
+}
+
+.block-btn-send {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .form-control:focus {
@@ -367,6 +394,212 @@ footer {
     border-width: initial;
 }
 
-/*.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-    text-decoration: initial;
+// Блок с работами.
+.list-works {
+    display: flex;
+    margin-bottom: 5%;
+
+    .my-foto {
+        width: 400px;
+
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+.portfolio-title {
+    margin: 0px 0px 64px calc((48% - 490px) * 1);
+}
+
+.ya {
+    &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+// Для прелоадера.
+/////////////////////////
+.mask {
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 75px;
+    height: 75px;
+    border: 10px solid rgba(89, 196, 90, 0.6);
+    border-radius: 50%;
+    border-left-color: var(--green);
+    animation: loader 1.3s linear infinite;
+}
+
+@keyframes loader {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hide {
+    opacity: 0;
+}
+////////////////////////////
+
+/*.hide {
+    display: none;
 }*/
+
+.no-cursor {
+    &:hover {
+        cursor: not-allowed;
+    }
+}
+
+/* Стили для адаптивности */
+/* xs (<=543px) */
+@media (max-width: 575px) {
+    .person {
+        font-size: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .btn-link {
+        font-size: 9px;
+    }
+
+    .navbar {
+        //flex-direction: column;
+        align-items: start;
+    }
+
+    .font_3 {
+        font-size: 45px;
+    }
+
+    .about {
+        padding: 217px 0;
+    }
+
+    .block-name {
+        margin: 20px;
+    }
+
+    .btn-order {
+        margin-bottom: 0;
+    }
+
+    .text-my-info {
+        //margin: 0;
+        margin: 20px;
+        margin-bottom: 2%;
+        width: 300px;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .my-foto {
+        //width: 100%;
+        width: 400px;
+    }
+
+    .my-services {
+        margin: 20px;
+        font-size: 30px;
+    }
+
+    .video {
+        display: flex;
+        height: 100%;
+    }
+
+    .about-two {
+        padding-top: 0;
+        margin-bottom: 600px;
+    }
+
+    .form-group {
+        margin: 20px;
+
+        .form-control {
+            width: 100%;
+        }
+    }
+
+    .contact-me-details {
+        margin: 0 !important;
+    }
+
+    .block-with-ya {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .footer {
+        white-space: inherit;
+    }
+
+    .service-1 {
+        margin: 5px 5px;
+    }
+
+    footer .btn-form {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: -6%;
+    }
+
+    footer .block-arrow {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -5%;
+        margin-right: 0%;
+    }
+
+    .block-about {
+        flex-direction: column;
+    }
+
+    .ya {
+        display: none;
+    }
+
+    .list-works {
+        flex-direction: column-reverse;
+
+        .my-foto {
+            width: 100%;
+        }
+    }
+
+    .filter {
+        margin: 5px 0;
+    }
+
+    .after-footer {
+        padding: 200px 0;
+    }
+
+    .my-info-title {
+        padding-top: 10px;
+    }
+}
+
+/* md (>=768 и <=991) */
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+}

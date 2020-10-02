@@ -13,13 +13,33 @@ namespace Sky.Controllers {
             return View();
         }
 
+        // Метод переходит на главную страницу.
         [Route("index")]
         public IActionResult OnRouteMain() {
             return View("Index");
         }
 
+        // Метод переходит на страницу обо мне.
         [Route("about-me")]
         public IActionResult AboutMe() {
+            return View();
+        }
+
+        // Метод переходит на страницу описания услуги.
+        [Route("order-details")]
+        public IActionResult GetOrderDetails() {
+            return View();
+        }
+
+        // Метод переходит на страницу портфолио.
+        [Route("portfolio")]
+        public IActionResult Portfolio() {
+            return View();
+        }
+
+        // Метод переходит на страницу получения данных определенной работы.
+        [Route("get-work")]
+        public IActionResult GetWork() {
             return View();
         }
     }
