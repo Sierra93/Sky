@@ -10,7 +10,7 @@ var order = new Vue({
 	methods: {
 		// Функция получает данные услуги.
 		GetOrder(orderName) {
-			let sUrl = "https://localhost:44310/api/order/get-order?order=".concat(orderName);
+			let sUrl = "https://devmyprojects24.xyz/api/order/get-order?order=".concat(orderName);
 
 			try {
 				axios.get(sUrl)
@@ -19,7 +19,7 @@ var order = new Vue({
 						console.log("Данные услуги", this.aConcreteOrder);
 						localStorage["orderName"] = this.aConcreteOrder.orderName;
 						localStorage["orderDetails"] = this.aConcreteOrder.orderDetails;
-						window.location.href = "https://localhost:44310/order-details";
+						window.location.href = "https://devmyprojects24.xyz/order-details";
 					})
 					.catch((XMLHttpRequest) => {
 						throw new Error("Ошибка получения данных услуги", XMLHttpRequest.response.data);
@@ -67,6 +67,18 @@ var order = new Vue({
 
 				case "google":
 					$("#id-area").val("Здравствуйте. Хочу заказать настройку рекламы в Google.");
+					break;
+
+				case "web_app":
+					$("#id-area").val("Здравствуйте. Хочу заказать разработку веб-приложения.");
+					break;
+
+				case "client_server":
+					$("#id-area").val("Здравствуйте. Хочу заказать разработку клиент-серверного приложения.");
+					break;
+
+				case "mobile_app":
+					$("#id-area").val("Здравствуйте. Хочу заказать разработку мобильного приложения.");
 					break;
 			}
 		}

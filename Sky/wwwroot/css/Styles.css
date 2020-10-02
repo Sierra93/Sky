@@ -363,7 +363,8 @@ footer {
     margin-bottom: 0; }
   .text-my-info {
     margin: 20px;
-    margin-bottom: 2%; }
+    margin-bottom: 2%;
+    width: 300px; }
   .name {
     font-size: 30px; }
   .my-foto {
@@ -375,7 +376,8 @@ footer {
     display: flex;
     height: 100%; }
   .about-two {
-    padding-top: 0; }
+    padding-top: 0;
+    margin-bottom: 600px; }
   .form-group {
     margin: 20px; }
     .form-group .form-control {
@@ -409,7 +411,9 @@ footer {
   .filter {
     margin: 5px 0; }
   .after-footer {
-    padding: 200px 0; } }
+    padding: 200px 0; }
+  .my-info-title {
+    padding-top: 10px; } }
 
 /* md (>=768 и <=991) */
 /* lg (>=992 и <=1199) */

@@ -1,6 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using MimeKit;
 using Sky.Core;
 using Sky.Core.Constants;
 using Sky.Core.Data;
@@ -8,9 +6,10 @@ using Sky.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
-using MailKit.Net.Smtp;
 
 namespace Sky.Services {
     /// <summary>
@@ -73,6 +72,6 @@ namespace Sky.Services {
             catch (Exception ex) {
                 throw new Exception(ex.Message.ToString());
             }
-        }
+        }        
     }
 }

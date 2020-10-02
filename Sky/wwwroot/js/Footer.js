@@ -17,7 +17,7 @@ var footer = new Vue({
 				return;
 			}
 
-			let sUrl = "https://localhost:44310/api/order/create-request";
+			let sUrl = "https://devmyprojects24.xyz/api/order/create-request";
 
 			$("#id-btn-send").prop("disabled", true);
 

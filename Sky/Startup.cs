@@ -27,9 +27,9 @@ namespace Sky {
                options.UseSqlServer(
                    Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("Sky")));
 
-            services.AddCors(options => options.AddPolicy("ApiCorsPolicy", builder => {
-                builder.WithOrigins("https://apihosting.ru/", "https://apihosting.ru").AllowAnyMethod().AllowAnyHeader();
-            }));
+            //services.AddCors(options => options.AddPolicy("ApiCorsPolicy", builder => {
+            //    builder.WithOrigins("https://devmyprojects24.xyz/", "https://devmyprojects24.xyz").AllowAnyMethod().AllowAnyHeader();
+            //}));
 
             services.AddMvc(option => option.EnableEndpointRouting = false);
 

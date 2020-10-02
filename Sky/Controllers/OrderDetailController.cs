@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MimeKit;
 using Sky.Core;
 using Sky.Core.Data;
 using Sky.Models;
@@ -14,7 +16,7 @@ namespace Sky.Controllers {
     /// Контроллер описывает работу с услугами.
     /// </summary>
     [ApiController, Route("api/order")]
-    public class OrderDetailController : ControllerBase {
+    public class OrderDetailController : Controller {
         ApplicationDbContext _db;
 
         public OrderDetailController(ApplicationDbContext db) {
@@ -35,7 +37,7 @@ namespace Sky.Controllers {
         /// Метод создает новую заявку.
         /// </summary>
         [HttpPost, Route("create-request")]
-        public async Task<IActionResult> CreateRequest([FromBody] RequestDto requestDto) {
+        public async Task<IActionResult> CreateRequest(RequestDto requestDto) {
             BaseOrder baseOrder = new OrderDetailService(_db);
             await baseOrder.CreateRequest(requestDto);
 

@@ -1,9 +1,12 @@
 ﻿using MailKit.Net.Smtp;
 using MimeKit;
+using Sky.Core;
 using Sky.Core.Constants;
+using Sky.Core.Data;
 using Sky.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -95,8 +98,8 @@ namespace Sky.Services {
                 "Коротко о проекте: " + requestDto.Comment
                 };
                 using (var client = new SmtpClient()) {
-                    await client.ConnectAsync("smtp.mail.ru", 25, false);
-                    await client.AuthenticateAsync("sierra_93@mail.ru", "31293dd");
+                    await client.ConnectAsync("smtp.mail.ru", 2525, MailKit.Security.SecureSocketOptions.StartTls);
+                    await client.AuthenticateAsync("sierra_93@mail.ru", "13467982dd");
                     await client.SendAsync(emailMessage);
                     await client.DisconnectAsync(true);
                 }
