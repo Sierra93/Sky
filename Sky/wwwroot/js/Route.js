@@ -19,7 +19,7 @@
 	},
 	methods: {
 		onAboutMe() {
-			window.location.href = "https://localhost:44310/about-me";
+			window.location.href = "https://skyhorizen.ru/about-me";
 		}		
 	}
 });
@@ -29,15 +29,15 @@ var header = new Vue({
 	methods: {
 		onMain() {
 			localStorage.removeItem("bDetail");
-			window.location.href = "https://localhost:44310/index";
+			window.location.href = "https://skyhorizen.ru/index";
 		},
 
 		onAboutMe() {
-			window.location.href = "https://localhost:44310/about-me";
+			window.location.href = "https://skyhorizen.ru/about-me";
 		},
 
 		onPortfolio() {
-			window.location.href = "https://localhost:44310/portfolio";
+			window.location.href = "https://skyhorizen.ru/portfolio";
 		}
 	}
 });

@@ -20,7 +20,7 @@ var portfolio = new Vue({
 	methods: {
 		// Функция получает список всех работ.
 		_loadAllWorks() {
-			let sUrl = "https://localhost:44310/api/portfolio/get-works";
+			let sUrl = "https://skyhorizen.ru/api/portfolio/get-works";
 
 			try {
 				axios.get(sUrl)
@@ -41,7 +41,7 @@ var portfolio = new Vue({
 
 		// Функция получает все данные конкретной работы.
 		onGetConcreteWork() {			
-			let sUrl = "https://localhost:44310/api/portfolio/get-work?groupId=".concat(+localStorage["groupId"]);
+			let sUrl = "https://skyhorizen.ru/api/portfolio/get-work?groupId=".concat(+localStorage["groupId"]);
 
 			try {
 				axios.get(sUrl)
@@ -65,13 +65,13 @@ var portfolio = new Vue({
 			let groupId = e.target.value;
 			localStorage["bDetail"] = true;
 			localStorage["groupId"] = groupId;
-			window.location.href = "https://localhost:44310/get-work";
+			window.location.href = "https://skyhorizen.ru/get-work";
 		},
 
 		// Функция получает все работы типа.
 		onFilter(type, name) {
 			this.title = name;
-			let sUrl = "https://localhost:44310/api/portfolio/type-work?type=".concat(type);
+			let sUrl = "https://skyhorizen.ru/api/portfolio/type-work?type=".concat(type);
 
 			try {
 				axios.get(sUrl)
