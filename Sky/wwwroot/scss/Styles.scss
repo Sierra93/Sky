@@ -30,7 +30,7 @@ body {
 }
 
 .header-video {
-    height: 800px;    
+    height: 800px;
 }
 
 .person {
@@ -283,7 +283,7 @@ body {
         color: black;
 
         &:hover {
-            border-color: transparent!important;
+            border-color: transparent !important;
         }
     }
 }
@@ -596,10 +596,51 @@ footer {
 
 /* md (>=768 и <=991) */
 @media (min-width: 768px) and (max-width: 991px) {
-    
 }
 
 /* lg (>=992 и <=1199) */
 @media (min-width: 992px) and (max-width: 1199px) {
-    
+}
+
+/* lg (>=1920 и <=1080) */
+@media (min-width: 1800px) {
+    .video {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        z-index: 0;
+        position: absolute;
+        height: 2000px;
+    }
+
+    .about-me {
+        margin: 0px 64px 20px calc((50% - 490px) * 5);    
+    }
+
+    .my-foto {
+        width: 900px;
+    }
+
+    .about {
+        padding: 271px 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .about-two {
+        padding: 0;
+        margin-bottom: 362px;
+    }
+
+    .my-services {
+        letter-spacing: 0.1em;
+        font-weight: 900;
+        text-align: start;
+        line-height: 1.2em;
+        font-size: 42px;
+        font-family: arial black,arial-w01-black,arial-w02-black,arial-w10 black,sans-serif;
+        border-top: 2px solid black;
+        width: 40px;
+        margin: 0px 0px 64px calc((60% - 490px) * 1);
+    }
 }
